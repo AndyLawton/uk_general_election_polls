@@ -17,11 +17,15 @@ def fetch_tables():
         level2 = toc.find_all("li", {"class": "toclevel-2"})
         level2_links = [x.find('a')['href'] for x in level2]
         years = [x.replace('#', '') for x in level2_links if len(x) == 5]
+        if len(years) == 0:
+            level1 = toc.find_all("li", {"class": "toclevel-1"})
+            level1_links = [x.find('a')['href'] for x in level1]
+            years = [x.replace('#', '') for x in level1_links if len(x) == 5]
         for year in years:
             if election == w.url_2015 and year in ['2010', '2011', '2012']:
                 continue
             table = pd.read_html(str(soup.find(id=year).find_next('table')))[0]
-            if len(table) < 20:
+            if len(table) < 20 and year not in ['2002', '2001', '1974', '1970']:
                 break
             election_tables.append((year, table))
     return election_tables
@@ -45,4 +49,3 @@ def fetch_all_polls(cleanup=False):
         return poll_cleanup(all_polls)
     else:
         return all_polls
-

@@ -45,7 +45,7 @@ pollster_cleanup = {
     'Harris Interative': 'Harris Interactive',
     'Angus Reid Public Opinion': 'Angus Reid Strategies',
     'TNS BMRB': 'TNS',
-    'Focaldata (MRP)': 'FocalData (MRP)',
+    'Focaldata': 'FocalData',
     'ICM': 'ICM Research',
     'Kantar': 'Kantar Public',
     'BMG': 'BMG Research',

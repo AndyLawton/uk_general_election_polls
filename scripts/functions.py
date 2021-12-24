@@ -71,9 +71,10 @@ def set_pollster_client(pollster, client, pollster_client):
         pollster, client = pollster.split('/')
     if 'general election' in pollster.lower():
         pollster = 'General Election'
+    pollster = pollster.replace('(MRP)', '')
+    pollster = pollster.strip()
     if pollster in pollster_cleanup:
         pollster = pollster_cleanup[pollster]
-    pollster = pollster.strip()
     if not isna(client):
         client = client.strip()
 
@@ -90,7 +91,7 @@ def format_lead(row):
         return 'Tie'
     second = sorted([a for a in row[party_columns] if not isna(a)], reverse=True)[1]
     party_name = row[row == largest_share].index[0]
-    return f'{party_name}+{largest_share - second:.1f}'
+    return f'{party_name:.3s}+{largest_share - second:.1f}'
 
 
 def poll_result_cleanup(poll_result_column):
