@@ -4,6 +4,7 @@ import pandas as pd
 def fetch_tables():
     import requests
     from bs4 import BeautifulSoup
+    from numpy import nan
     from . import wiki_links as w
 
     election_tables = []
@@ -27,6 +28,11 @@ def fetch_tables():
             table = pd.read_html(str(soup.find(id=year).find_next('table')))[0]
             if len(table) < 20 and year not in ['2002', '2001', '1974', '1970']:
                 break
+            # Fix for merged Other cell
+            if ('Others', 'Others') in table.columns:
+                other_left = list(table.columns)[list(table.columns).index(('Others', 'Others')) - 1]
+                contains_other_mask = table[other_left].str.contains('Other on')
+                table.loc[contains_other_mask, other_left] = nan
             election_tables.append((year, table))
     return election_tables
 
