@@ -1,18 +1,31 @@
-import pandas as pd
+from requests import get
+from bs4 import BeautifulSoup
+from os.path import isfile
+from pandas import read_html, read_feather, DataFrame
+from numpy import nan
+from .constants import wikipedia_links, feather_location
+from .renames import column_cleanup
 
 
-def fetch_tables():
-    import requests
-    from bs4 import BeautifulSoup
-    from numpy import nan
-    from . import wiki_links as w
+def fetch_1974_oct(refresh=False):
+    page_feather_location = f'{feather_location}1974_oct.feather'
+    if refresh or not isfile(page_feather_location):
+        page = get(wikipedia_links['1974'])
+        soup = BeautifulSoup(page.content, "html.parser")
+        table_html = soup.find(id='October_general_election').find_next('table')
+        table = read_html(str(table_html))[0]
+        table.columns = [column_cleanup[a] for a, b in table.columns]
+        table['year'] = '1974'
+        table.to_feather(page_feather_location)
+    else:
+        table = read_feather(page_feather_location)
+    return table
 
-    election_tables = []
-    page = requests.get(w.url_1974)
-    soup = BeautifulSoup(page.content, "html.parser")
-    election_tables.append(('1974', pd.read_html(str(soup.find(id='October_general_election').find_next('table')))[0]))
-    for election in w.general_elections:
-        page = requests.get(election)
+
+def fetch_page(url, ge_year, refresh=False):
+    page_feather_location = f'{feather_location}{ge_year}.feather'
+    if refresh or not isfile(page_feather_location) or ge_year == 'next':
+        page = get(url)
         soup = BeautifulSoup(page.content, "html.parser")
         toc = soup.find(id='toc')
         level2 = toc.find_all("li", {"class": "toclevel-2"})
@@ -22,31 +35,45 @@ def fetch_tables():
             level1 = toc.find_all("li", {"class": "toclevel-1"})
             level1_links = [x.find('a')['href'] for x in level1]
             years = [x.replace('#', '') for x in level1_links if len(x) == 5]
+        page_df = DataFrame()
         for year in years:
-            if election == w.url_2015 and year in ['2010', '2011', '2012']:
+            if ge_year == '2015' and year in ['2010', '2011', '2012']:
                 continue
-            table = pd.read_html(str(soup.find(id=year).find_next('table')))[0]
+            table_html = soup.find(id=year).find_next('table')
+            table = read_html(str(table_html))[0]
             if len(table) < 20 and year not in ['2002', '2001', '1974', '1970']:
                 break
             # Fix for merged Other cell
+            # TODO: where other is just a plain percentage, will still yield wrong results
             if ('Others', 'Others') in table.columns:
                 other_left = list(table.columns)[list(table.columns).index(('Others', 'Others')) - 1]
                 contains_other_mask = table[other_left].str.contains('Other on')
                 table.loc[contains_other_mask, other_left] = nan
-            election_tables.append((year, table))
-    return election_tables
+            table.columns = [column_cleanup[a] for a, b in table.columns]
+            table['year'] = year
+            page_df = page_df.append(table, ignore_index=True)
+        # Fix for int/string sample sizes
+        if 'sample_size' in page_df.columns:
+            page_df['sample_size'] = page_df['sample_size'].astype(str)
+        page_df.to_feather(page_feather_location)
+    else:
+        page_df = read_feather(page_feather_location)
+    return page_df
 
 
-def fetch_all_polls(cleanup=False):
+def fetch_tables(refresh=False):
+    all_election_tables = [fetch_1974_oct(refresh=refresh)]
+    for ge_year, url in wikipedia_links.items():
+        all_election_tables.append(fetch_page(url, ge_year, refresh=refresh))
+    return all_election_tables
+
+
+def fetch_all_polls(cleanup=False, refresh=False):
     from .constants import column_names
-    from .renames import column_cleanup
-    election_tables = fetch_tables()
-    all_polls = pd.DataFrame(columns=column_names)
-    for year, polling_results in election_tables:
-        table = polling_results.copy()
-        table.columns = [column_cleanup[a] for a, b in table.columns]
-        table['year'] = year
-        all_polls = all_polls.append(table, ignore_index=True)
+    election_tables = fetch_tables(refresh=refresh)
+    all_polls = DataFrame(columns=column_names)
+    for polling_results in election_tables:
+        all_polls = all_polls.append(polling_results, ignore_index=True)
     all_polls = all_polls[
         ~((all_polls['lead'] == all_polls['conservative']) & (all_polls['lead'] == all_polls['labour']))]
 

@@ -1,5 +1,26 @@
 from numpy import nan
 
+poll_database_lcn = 'poll_database/'
+feather_location = f'{poll_database_lcn}feathers/'
+
+wikipedia_links = {
+    '1974': 'https://en.wikipedia.org/wiki/Opinion_polling_for_the_1974_United_Kingdom_general_elections',
+    '1979': 'https://en.wikipedia.org/wiki/Opinion_polling_for_the_1979_United_Kingdom_general_election',
+    '1983': 'https://en.wikipedia.org/wiki/Opinion_polling_for_the_1983_United_Kingdom_general_election',
+    '1987': 'https://en.wikipedia.org/wiki/Opinion_polling_for_the_1987_United_Kingdom_general_election',
+    '1992': 'https://en.wikipedia.org/wiki/Opinion_polling_for_the_1992_United_Kingdom_general_election',
+    '1997': 'https://en.wikipedia.org/wiki/Opinion_polling_for_the_1997_United_Kingdom_general_election',
+    '2001': 'https://en.wikipedia.org/wiki/Opinion_polling_for_the_2001_United_Kingdom_general_election',
+    '2005': 'https://en.wikipedia.org/wiki/Opinion_polling_for_the_2005_United_Kingdom_general_election',
+    '2010': 'https://en.wikipedia.org/wiki/Opinion_polling_for_the_2010_United_Kingdom_general_election',
+    '2012': 'https://en.wikipedia.org/wiki/Opinion_polling_for_the_2015_United_Kingdom_general_election'
+            '_(2010%E2%80%932012) ',
+    '2015': 'https://en.wikipedia.org/wiki/Opinion_polling_for_the_2015_United_Kingdom_general_election',
+    '2017': 'https://en.wikipedia.org/wiki/Opinion_polling_for_the_2017_United_Kingdom_general_election',
+    '2019': 'https://en.wikipedia.org/wiki/Opinion_polling_for_the_2019_United_Kingdom_general_election',
+    'next': 'https://en.wikipedia.org/wiki/Opinion_polling_for_the_next_United_Kingdom_general_election',
+}
+
 poll_info_columns = [
     'dates', 'year',
     'area',
