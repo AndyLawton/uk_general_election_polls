@@ -49,6 +49,7 @@ party_columns = major_parties + minor_parties
 final_columns = [
     'others',
     'lead',
+    'lead_value',
 ]
 column_names = poll_info_columns + party_columns + final_columns
 

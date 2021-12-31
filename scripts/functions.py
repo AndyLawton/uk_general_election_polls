@@ -85,13 +85,13 @@ def format_lead(row):
     from pandas import isna
     from .constants import party_columns
     if isna(row.labour):
-        return ''
+        return '', 0
     largest_share = row[party_columns].max()
     if len(row[row == largest_share]) > 1:
-        return 'Tie'
+        return 'Tie', 0
     second = sorted([a for a in row[party_columns] if not isna(a)], reverse=True)[1]
     party_name = row[row == largest_share].index[0]
-    return f'{party_name:.3s}+{largest_share - second:.1f}'
+    return f'{party_name:.3s}+{largest_share - second:.1f}', largest_share - second
 
 
 def poll_result_cleanup(poll_result_column):
@@ -144,8 +144,8 @@ def poll_cleanup(poll_df):
         subset=['pollster', 'date_started', 'date_concluded', 'conservative', 'labour', 'liberal_democrat', 'green'],
         keep='last', inplace=True)
 
-    # Replaces lead column with party+x
-    poll_df['lead'] = poll_df.apply(format_lead, axis=1)
+    # Replaces lead column with party+x, lead_value columns added for value calculations
+    poll_df[['lead', 'lead_value']] = poll_df.apply(format_lead, axis=1, result_type='expand')
 
     # Sort by date and resets index
     poll_df.sort_values(by='date_concluded', ascending=False, inplace=True)
