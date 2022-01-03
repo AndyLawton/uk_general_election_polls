@@ -41,7 +41,7 @@ def fetch_page(url, ge_year, refresh=False):
                 continue
             table_html = soup.find(id=year).find_next('table')
             table = read_html(str(table_html))[0]
-            if len(table) < 20 and year not in ['2002', '2001', '1974', '1970']:
+            if len(table) < 20 and year not in ['2002', '2001', '1974', '1970'] and ge_year != 'next':
                 break
             # Fix for merged Other cell
             # TODO: where other is just a plain percentage, will still yield wrong results

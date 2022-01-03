@@ -86,6 +86,7 @@ def format_lead(row):
     from .constants import party_columns
     if isna(row.labour):
         return '', 0
+    party_columns = list( set.intersection(set(party_columns), set(row.index)))
     largest_share = row[party_columns].max()
     if len(row[row == largest_share]) > 1:
         return 'Tie', 0
