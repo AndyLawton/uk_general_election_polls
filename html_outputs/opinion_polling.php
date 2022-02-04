@@ -14,7 +14,7 @@
     .column {
         float: left;
         width:50%;
-        padding: 10px;
+        padding: 25px;
         text-align: center;
     }
 
@@ -36,7 +36,7 @@
     }
 
     body {
-        max-width:1200px;
+        max-width:1300px;
         margin: auto;
 
     }
