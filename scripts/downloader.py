@@ -47,7 +47,7 @@ def fetch_page(url, ge_year, refresh=False):
             # TODO: where other is just a plain percentage, will still yield wrong results
             if ('Others', 'Others') in table.columns:
                 other_left = list(table.columns)[list(table.columns).index(('Others', 'Others')) - 1]
-                contains_other_mask = table[other_left].str.contains('Other on')
+                contains_other_mask = table[other_left].fillna('-').str.contains('Other on')
                 table.loc[contains_other_mask, other_left] = nan
             table.columns = [column_cleanup[a] for a, b in table.columns]
             table['year'] = year

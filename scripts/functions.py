@@ -117,6 +117,7 @@ def poll_cleanup(poll_df):
 
     # Split out other party column into individual party results
     other_parties = json_normalize(poll_df['others'].map(others_to_json))
+    other_parties.index = poll_df.index
     for party in other_parties.columns:
         other_parties[party] = poll_result_cleanup(other_parties[party])
 

@@ -51,4 +51,6 @@ pollster_cleanup = {
     'BMG': 'BMG Research',
     'Lord Ashcroft': 'Lord Ashcroft Polls',
     'TNS-BMRB': 'TNS',
+    'Findoutnow': 'Find Out Now',
+    'Techne': 'Techne UK',
 }
