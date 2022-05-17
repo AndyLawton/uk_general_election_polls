@@ -53,4 +53,5 @@ pollster_cleanup = {
     'TNS-BMRB': 'TNS',
     'Findoutnow': 'Find Out Now',
     'Techne': 'Techne UK',
+    'Survation (MRP update)': 'Survation',
 }
