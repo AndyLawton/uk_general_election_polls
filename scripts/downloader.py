@@ -44,11 +44,22 @@ def fetch_page(url, ge_year, refresh=False):
             if len(table) < 20 and year not in ['2002', '2001', '1974', '1970'] and ge_year != 'next':
                 break
             # Fix for merged Other cell
-            # TODO: where other is just a plain percentage, will still yield wrong results
             if ('Others', 'Others') in table.columns:
                 other_left = list(table.columns)[list(table.columns).index(('Others', 'Others')) - 1]
                 contains_other_mask = table[other_left].fillna('-').str.contains('Other on')
                 table.loc[contains_other_mask, other_left] = nan
+
+                from pandas import to_numeric
+                from .constants import replacement_values
+                still_contains_other_mask = (
+                        (table[other_left] == table[('Others', 'Others')]) &
+                        (to_numeric(
+                            table[other_left].str.strip('%').str.strip('<').str.strip('>').replace(
+                                replacement_values)
+                            , errors='coerce') > 8)
+                )
+                table.loc[still_contains_other_mask, other_left] = nan
+
             table.columns = [column_cleanup[a] for a, b in table.columns]
             table['year'] = year
             page_df = page_df.append(table, ignore_index=True)
