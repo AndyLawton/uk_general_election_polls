@@ -4,6 +4,17 @@ poll_database_lcn = 'poll_database/'
 feather_location = f'{poll_database_lcn}feathers/'
 
 wikipedia_links = {
+
+    # '1945': 'https://en.wikipedia.org/wiki/Opinion_polling_for_the_1945_United_Kingdom_general_election', #Will prob fail
+    # '1950': 'https://en.wikipedia.org/wiki/Opinion_polling_for_the_1950_United_Kingdom_general_election',
+    # '1951': 'https://en.wikipedia.org/wiki/Opinion_polling_for_the_1951_United_Kingdom_general_election',
+    # '1955': 'https://en.wikipedia.org/wiki/Opinion_polling_for_the_1955_United_Kingdom_general_election',
+    # '1959': 'https://en.wikipedia.org/wiki/Opinion_polling_for_the_1959_United_Kingdom_general_election', #Will prob fail
+    # '1964': 'https://en.wikipedia.org/wiki/Opinion_polling_for_the_1964_United_Kingdom_general_election',
+    #'1966': 'https://en.wikipedia.org/wiki/Opinion_polling_for_the_1966_United_Kingdom_general_election',
+
+
+
     '1974': 'https://en.wikipedia.org/wiki/Opinion_polling_for_the_1974_United_Kingdom_general_elections',
     '1979': 'https://en.wikipedia.org/wiki/Opinion_polling_for_the_1979_United_Kingdom_general_election',
     '1983': 'https://en.wikipedia.org/wiki/Opinion_polling_for_the_1983_United_Kingdom_general_election',

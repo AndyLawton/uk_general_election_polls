@@ -29,7 +29,7 @@ column_cleanup = {'All': 'alliance',
                   'Surveyend date': 'dates',
                   'UKIP': 'united_kingdom_independence_party',
                   'Reclaim Party': 'reclaim_party',
-                  'Brexit Party': 'brexit_party'
+                  'Brexit Party': 'brexit_party',
                   }
 
 pollster_cleanup = {
@@ -52,6 +52,10 @@ pollster_cleanup = {
     'Lord Ashcroft': 'Lord Ashcroft Polls',
     'TNS-BMRB': 'TNS',
     'Findoutnow': 'Find Out Now',
+    'FindOutNow': 'Find Out Now',
     'Techne': 'Techne UK',
     'Survation (MRP update)': 'Survation',
+    'J&L Partners': 'JL Partners Polls',
+    'Redfield & Wilton': 'Redfield & Wilton Strategies',
+    'People Polling': 'PeoplePolling',
 }
