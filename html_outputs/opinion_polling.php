@@ -74,7 +74,7 @@
 
 
 
-<div class="row center">
+<div class="row center" style="text-align: center;">
     <img src="monthly_trend.png"/>
 </div>
 
