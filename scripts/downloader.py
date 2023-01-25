@@ -27,8 +27,8 @@ def fetch_page(url, ge_year, refresh=False):
     if refresh or not isfile(page_feather_location) or ge_year == 'next':
         page = get(url)
         soup = BeautifulSoup(page.content, "html.parser")
-        toc = soup.find(id='toc')
-        level2 = toc.find_all("li", {"class": "toclevel-2"})
+        toc = soup.find_all("ul", {"class": "vector-toc-list"})[1]
+        level2 = toc.find_all("li", {"class": "vector-toc-level-2"})
         level2_links = [x.find('a')['href'] for x in level2]
         years = [x.replace('#', '') for x in level2_links if len(x) == 5]
         if len(years) == 0:
