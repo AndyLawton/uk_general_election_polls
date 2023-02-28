@@ -36,6 +36,7 @@ def main():
         elif opt in ["-w", "--web-location"]:
             if arg != web_files_location:
                 copy(f'{web_files_location}/opinion_polling.php', f'{arg}/opinion_polling.php')
+                copy(f'{web_files_location}/favicon.ico', f'{arg}/favicon.ico')
             web_files_location = arg
 
     if not os.path.isdir(poll_db_location):
@@ -55,7 +56,7 @@ def main():
     one_year_polls = all_polls[
         all_polls[reporting_date] >= (most_recent_date + relativedelta(months=-17)).replace(day=1)].copy()
 
-    pollsters_latest = one_year_polls.groupby('pollster').nth(1).reset_index(drop=False)
+    pollsters_latest = one_year_polls.groupby('pollster').nth(0).reset_index(drop=False)
 
     top_five = {'Ipsos MORI': 100,
                 'Opinium': 79,

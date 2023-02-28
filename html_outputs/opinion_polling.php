@@ -2,7 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="keywords" content="polling, westminster, general elections, polls"/>
+    <meta name="author" content="Andy Lawton">
+    <meta name="description" content="Latest polling average for Westminster Elections"/>
     <title>Westminster Opinion Polling</title>
+    <link rel="icon" type="image/x-ico" href="favicon.ico" />
 </head>
 
 <style>
