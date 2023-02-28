@@ -43,6 +43,15 @@
         text-align: center !important;
     }
 
+    #T_polling_average .row0 {
+        font-weight:bold;
+        font-size:2em !important;
+    }
+
+    #T_last_25_polls .date_started {
+        text-align: center !important;
+    }
+
     body {
         max-width:1300px;
         margin: auto;
