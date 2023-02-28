@@ -14,6 +14,7 @@ def main():
     import os
     import sys
     import pandas as pd
+    from shutil import copy
     from dateutil.relativedelta import relativedelta
     from scripts.downloader import fetch_all_polls
     from scripts.constants import major_parties
@@ -33,6 +34,8 @@ def main():
         elif opt in ["-d", "--db-location"]:
             poll_db_location = arg
         elif opt in ["-w", "--web-location"]:
+            if arg != web_files_location:
+                copy(f'{web_files_location}/opinion_polling.php', f'{arg}/opinion_polling.php')
             web_files_location = arg
 
     if not os.path.isdir(poll_db_location):
@@ -52,11 +55,7 @@ def main():
     one_year_polls = all_polls[
         all_polls[reporting_date] >= (most_recent_date + relativedelta(months=-17)).replace(day=1)].copy()
 
-    pollsters_latest = pd.DataFrame()
-    for pollster in one_year_polls.pollster.unique():
-        pollster_data = one_year_polls.query(f'pollster == "{pollster}"')
-        latest_poll = pollster_data.iloc[0]
-        pollsters_latest = pollsters_latest.append(latest_poll)
+    pollsters_latest = one_year_polls.groupby('pollster').nth(1).reset_index(drop=False)
 
     top_five = {'Ipsos MORI': 100,
                 'Opinium': 79,
@@ -162,7 +161,8 @@ def main():
     one_year_polls['poll_month'] = one_year_polls[reporting_date].apply(lambda x: x.replace(day=1))
 
     pollster_monthly_summary = one_year_polls.groupby(['poll_month', 'pollster'])[major_parties].agg(['mean', 'count'])
-    pollster_monthly_summary.columns = [x if i == 0 else f'count{major_parties.index(x)}' for x in major_parties for i in
+    pollster_monthly_summary.columns = [x if i == 0 else f'count{major_parties.index(x)}' for x in major_parties for i
+                                        in
                                         range(0, 2)]
     pollster_monthly_summary.drop(columns=[f'count{major_parties.index(x)}' for x in major_parties][1:], inplace=True)
     pollster_monthly_summary.rename(columns={"count0": "count"}, inplace=True)
@@ -280,7 +280,6 @@ def main():
                       .replace('>poll_weight', '>w')
                       )
         return df_as_html
-
 
     display_columns = [reporting_date, 'pollster', 'conservative', 'labour', 'liberal_democrat', 'lead_value']
     top_25_html = polls_to_html(all_polls[display_columns][0:25], title='Last 25 Polls')

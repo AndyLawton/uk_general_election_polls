@@ -1,7 +1,7 @@
 from requests import get
 from bs4 import BeautifulSoup
 from os.path import isfile
-from pandas import read_html, read_feather, DataFrame
+from pandas import read_html, read_feather, DataFrame, concat
 from numpy import nan
 from .constants import wikipedia_links, feather_location
 from .renames import column_cleanup
@@ -62,7 +62,7 @@ def fetch_page(url, ge_year, refresh=False):
 
             table.columns = [column_cleanup[a] for a, b in table.columns]
             table['year'] = year
-            page_df = page_df.append(table, ignore_index=True)
+            page_df = concat([page_df, table], axis=0, ignore_index=True)
         # Fix for int/string sample sizes
         if 'sample_size' in page_df.columns:
             page_df['sample_size'] = page_df['sample_size'].astype(str)
@@ -84,7 +84,7 @@ def fetch_all_polls(cleanup=False, refresh=False):
     election_tables = fetch_tables(refresh=refresh)
     all_polls = DataFrame(columns=column_names)
     for polling_results in election_tables:
-        all_polls = all_polls.append(polling_results, ignore_index=True)
+        all_polls = concat([all_polls, polling_results], axis=0, ignore_index=True)
     all_polls = all_polls[
         ~((all_polls['lead'] == all_polls['conservative']) & (all_polls['lead'] == all_polls['labour']))]
 
