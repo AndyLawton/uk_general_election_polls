@@ -106,7 +106,7 @@ def poll_result_cleanup(poll_result_column):
 
 def poll_cleanup(poll_df):
     from .constants import column_names, party_columns, final_column_names
-    from pandas import json_normalize, to_datetime
+    from pandas import json_normalize, to_datetime, offsets
 
     # Remove All Wikipedia Citations
     for column in column_names:
@@ -135,6 +135,12 @@ def poll_cleanup(poll_df):
     poll_df['date_started'] = to_datetime(poll_df['date_started'])
     poll_df['date_concluded'] = to_datetime(poll_df['date_concluded'])
     poll_df.drop(columns=['dates', 'year'], inplace=True)
+
+    poll_df.loc[
+        poll_df.date_concluded<poll_df.date_started,
+        'date_started'] = poll_df.loc[
+                                  poll_df.date_concluded<poll_df.date_started,
+                                  'date_started'] - offsets.DateOffset(years=1)
 
     # Cleanup Pollster and Client
     poll_df[['pollster', 'client']] = poll_df.apply(

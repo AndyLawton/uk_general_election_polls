@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>UK Opinion Polling-2</title>
+    <title>Westminster Opinion Polling</title>
 </head>
 
 <style>
@@ -33,6 +33,10 @@
     #T_polling_average_ .row0 {
         font-weight:bold;
         font-size:2em !important;
+    }
+
+    #T_last_25_polls_ .date_started {
+        text-align: center !important;
     }
 
     body {
