@@ -178,8 +178,6 @@ def main():
 
     monthly_summary[['lead', 'lead_value']] = monthly_summary.apply(format_lead, axis=1, result_type='expand')
 
-    monthly_summary.iloc[:0:-1].to_clipboard(sep='\t')
-
     def result_to_opacity(result, range_min, range_max):
         result_range = range_max - range_min
         result_percent = (result - range_min)/result_range
