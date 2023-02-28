@@ -107,10 +107,13 @@ def poll_result_cleanup(poll_result_column):
 def poll_cleanup(poll_df):
     from .constants import column_names, party_columns, final_column_names
     from pandas import json_normalize, to_datetime, offsets
+    from numpy import nan
 
     # Remove All Wikipedia Citations
     for column in column_names:
+        poll_df[column] = poll_df[column].map(str)
         poll_df[column] = poll_df[column].str.replace(r"\[.*\]", "", regex=True)
+        poll_df.loc[poll_df[column] == 'nan', column] = nan
 
     for party in party_columns:
         poll_df[party] = poll_result_cleanup(poll_df[party])

@@ -1,14 +1,17 @@
 from requests import get
 from bs4 import BeautifulSoup
 from os.path import isfile
-from pandas import read_html, read_feather, DataFrame, concat
+from pandas import read_html, read_feather, DataFrame, concat, read_csv, read_json, read_excel
 from numpy import nan
-from .constants import wikipedia_links, feather_location
+from .constants import wikipedia_links, feather_location, csv_location, excel_location, json_location
 from .renames import column_cleanup
 
 
 def fetch_1974_oct(refresh=False):
     page_feather_location = f'{feather_location}1974_oct.feather'
+    page_csv_location = f'{csv_location}1974_oct.csv'
+    page_excel_location = f'{excel_location}1974_oct.xlsx'
+    page_json_location = f'{json_location}1974_oct.json'
     if refresh or not isfile(page_feather_location):
         page = get(wikipedia_links['1974'])
         soup = BeautifulSoup(page.content, "html.parser")
@@ -16,14 +19,20 @@ def fetch_1974_oct(refresh=False):
         table = read_html(str(table_html))[0]
         table.columns = [column_cleanup[a] for a, b in table.columns]
         table['year'] = '1974'
-        table.to_feather(page_feather_location)
+        table.to_excel(page_excel_location, index=False)
+        #table.to_feather(page_feather_location)
+        table.to_json(page_json_location, index=False, orient='split')
+        table.to_csv(page_csv_location, index=False)
     else:
-        table = read_feather(page_feather_location)
+        table = read_excel(page_excel_location)
     return table
 
 
 def fetch_page(url, ge_year, refresh=False):
     page_feather_location = f'{feather_location}{ge_year}.feather'
+    page_csv_location = f'{csv_location}{ge_year}.csv'
+    page_excel_location = f'{excel_location}{ge_year}.xlsx'
+    page_json_location = f'{feather_location}{ge_year}.json'
     if refresh or not isfile(page_feather_location) or ge_year == 'next':
         page = get(url)
         soup = BeautifulSoup(page.content, "html.parser")
@@ -66,9 +75,12 @@ def fetch_page(url, ge_year, refresh=False):
         # Fix for int/string sample sizes
         if 'sample_size' in page_df.columns:
             page_df['sample_size'] = page_df['sample_size'].astype(str)
-        page_df.to_feather(page_feather_location)
+        page_df.to_excel(page_excel_location, index=False)
+        #page_df.to_feather(page_feather_location)
+        page_df.to_json(page_json_location, index=False, orient='split')
+        page_df.to_csv(page_csv_location, index=False)
     else:
-        page_df = read_feather(page_feather_location)
+        page_df = read_excel(page_excel_location)
     return page_df
 
 

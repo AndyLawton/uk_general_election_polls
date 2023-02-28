@@ -2,6 +2,9 @@ from numpy import nan
 
 poll_database_lcn = 'poll_database/'
 feather_location = f'{poll_database_lcn}feathers/'
+csv_location = f'{poll_database_lcn}csvs/'
+json_location = f'{poll_database_lcn}jsons/'
+excel_location = f'{poll_database_lcn}excels/'
 
 wikipedia_links = {
 

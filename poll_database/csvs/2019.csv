@@ -1,0 +1,484 @@
+pollster_client,dates,area,sample_size,conservative,labour,liberal_democrat,scottish_national_party,plaid_cymru,green,brexit_party,united_kingdom_independence_party,change_uk,others,lead,year
+2019 general election,12 Dec,UK,–,43.6%,32.1%,11.6%,3.9%,0.5%,2.7%,2.0%,0.1%,0.0%,3.1%,11.5%,2019
+2019 general election,12 Dec,GB,–,44.7%,33.0%,11.8%,4.0%,0.5%,2.8%,2.1%,0.1%,0.0%,1.0%,11.7%,2019
+Survation,10–11 Dec,GB,2395,45%,34%,9%,4%,1%,3%,3%,–,–,1%,11%,2019
+Panelbase,10–11 Dec,GB,3174,43%,34%,11%,4%,0%,3%,4%,–,–,–,9%,2019
+Opinium,10–11 Dec,GB,3005,45%,33%,12%,4%,0%,2%,2%,–,–,1%,12%,2019
+Ipsos MORI/Evening Standard,9–11 Dec,GB,2213,44%,33%,12%,–,–,3%,2%,–,–,6%,11%,2019
+Deltapoll,9–11 Dec,GB,1818,45%,35%,10%,4%,0%,3%,4%,–,–,0%,10%,2019
+Kantar,9–11 Dec,GB,2815,44%,32%,13%,4%,0%,3%,3%,–,–,1%,12%,2019
+BMG/The Independent,6–11 Dec,GB,1660,41%,32%,14%,–,–,3%,4%,–,–,6%,9%,2019
+SavantaComRes/The Daily Telegraph,9–10 Dec,GB,2051,41%,36%,12%,4%,–,2%,3%,–,–,2%,5%,2019
+Number Cruncher Politics/Bloomberg,8–10 Dec,GB,1009,43%,33%,12%,4%,1%,3%,3%,–,–,1%,10%,2019
+YouGov (MRP),4–10 Dec,GB,105612,43%,34%,12%,3%,0%,3%,3%,–,–,2%,9%,2019
+FocalData (MRP),27 Nov–10 Dec,GB,21213,42%,34%,14%,3%,1%,3%,3%,–,–,1%,8%,2019
+ICM Research/Reuters,6–9 Dec,GB,2011,42%,36%,12%,3%,0%,2%,3%,0%,–,1%,6%,2019
+SavantaComRes/Remain United[a],6–8 Dec,GB,6073,43%,36%,12%,4%,0%,2%,3%,–,–,1%,7%,2019
+Qriously,5–8 Dec,UK,2222,43%,30%,12%,2%,–,4%,3%,–,–,5%,13%,2019
+Survation/Good Morning Britain,5–7 Dec,UK,1012,45%,31%,11%,3%,1%,2%,4%,–,–,3%,14%,2019
+Deltapoll/The Mail on Sunday,5–7 Dec,GB,1533,44%,33%,11%,4%,0%,2%,3%,1%,–,1%,11%,2019
+YouGov/The Sunday Times,5–6 Dec,GB,1680,43%,33%,13%,4%,0%,3%,3%,–,–,1%,10%,2019
+BMG/The Independent,4–6 Dec,GB,1542,41%,32%,14%,3%,0%,4%,4%,0%,0%,1%,9%,2019
+Opinium/The Observer,4–6 Dec,GB,2002,46%,31%,13%,4%,0%,2%,3%,–,–,1%,15%,2019
+Panelbase,4–6 Dec,GB,2033,43%,34%,13%,4%,1%,2%,3%,–,–,0%,9%,2019
+SavantaComRes/The Sunday Telegraph,4–5 Dec,GB,2034,41%,33%,12%,4%,–,2%,3%,–,–,5%,8%,2019
+SavantaComRes/Remain United[a],2–5 Dec,GB,2005,42%,36%,11%,3%,–,2%,4%,–,–,1%,6%,2019
+Ipsos MORI/Evening Standard,2–4 Dec,GB,1545,44%,32%,13%,4%,1%,3%,2%,–,–,1%,12%,2019
+SavantaComRes/The Daily Telegraph,2–3 Dec,GB,2041,42%,32%,12%,4%,–,2%,3%,–,–,5%,10%,2019
+YouGov/The Times/Sky News,2–3 Dec,GB,1699,42%,33%,12%,5%,0%,4%,4%,–,–,1%,9%,2019
+ICM Research,29 Nov–2 Dec,GB,2029,42%,35%,13%,3%,0%,2%,3%,–,–,1%,7%,2019
+Kantar,28 Nov–2 Dec,GB,1096,44%,32%,15%,3%,1%,3%,2%,–,–,1%,12%,2019
+Deltapoll/The Mail on Sunday,28–30 Nov,GB,1528,45%,32%,15%,3%,0%,1%,3%,0%,–,0%,13%,2019
+Survation/Good Morning Britain,26–30 Nov,UK,1065,42%,33%,11%,3%,1%,4%,3%,–,–,3%,9%,2019
+YouGov/The Sunday Times,28–29 Nov,GB,1680,43%,34%,13%,4%,0%,3%,2%,–,–,1%,9%,2019
+Opinium/The Observer,27–29 Nov,GB,2018,46%,31%,13%,4%,0%,3%,2%,–,–,2%,15%,2019
+BMG/The Independent,27–29 Nov,GB,1663,39%,33%,13%,4%,0%,5%,4%,0%,0%,1%,6%,2019
+SavantaComRes/The Sunday Telegraph,27–28 Nov,GB,2025,43%,33%,13%,3%,–,3%,4%,–,–,1%,10%,2019
+Panelbase,27–28 Nov,GB,2010,42%,34%,13%,3%,0%,3%,4%,–,–,1%,8%,2019
+SavantaComRes/The Daily Telegraph,25–26 Nov,GB,2034,41%,34%,13%,3%,–,2%,5%,–,–,1%,7%,2019
+YouGov/The Times/Sky News,25–26 Nov,GB,1678,43%,32%,13%,4%,0%,2%,4%,–,–,1%,11%,2019
+ICM Research,22–25 Nov,GB,2004,41%,34%,13%,3%,1%,3%,4%,0%,–,1%,7%,2019
+Kantar,21–25 Nov,GB,1097,43%,32%,14%,4%,0%,4%,3%,–,–,0%,11%,2019
+Deltapoll/The Mail on Sunday,21–23 Nov,GB,1519,43%,30%,16%,4%,0%,3%,3%,–,–,0%,13%,2019
+Survation/Good Morning Britain,20–23 Nov,UK,1010,41%,30%,15%,3%,1%,3%,5%,–,–,4%,11%,2019
+YouGov/The Sunday Times,21–22 Nov,GB,1677,42%,30%,16%,4%,0%,4%,3%,–,–,1%,12%,2019
+Opinium/The Observer,20–22 Nov,GB,2003,47%,28%,12%,5%,0%,3%,3%,–,–,2%,19%,2019
+Panelbase,20–22 Nov,GB,2028,42%,32%,14%,3%,1%,3%,3%,–,–,2%,10%,2019
+SavantaComRes/Sunday Express,20–21 Nov,GB,2038,42%,32%,15%,3%,0%,2%,5%,–,–,1%,10%,2019
+BMG,19–21 Nov,GB,1663,41%,28%,18%,2%,0%,5%,3%,–,–,1%,13%,2019
+YouGov,12–20 Nov,GB,11277,43%,29%,15%,4%,1%,3%,4%,–,–,2%,14%,2019
+SavantaComRes/The Daily Telegraph,18–19 Nov,GB,1628,42%,31%,15%,4%,0%,2%,5%,–,–,1%,11%,2019
+YouGov/The Times,18–19 Nov,GB,1606,42%,30%,15%,4%,0%,4%,4%,–,–,1%,12%,2019
+Ipsos MORI/Evening Standard,15–19 Nov,GB,1128,44%,28%,16%,4%,1%,3%,3%,–,–,1%,16%,2019
+YouGov,17–18 Nov,GB,1634,43%,29%,15%,4%,1%,3%,3%,–,–,3%,14%,2019
+ICM Research,15–18 Nov,GB,2010,42%,32%,13%,3%,0%,3%,5%,–,–,2%,10%,2019
+Kantar Archived 23 November 2019 at the Wayback Machine,14–18 Nov,GB,1176,45%,27%,16%,4%,1%,3%,2%,–,–,1%,18%,2019
+Survation/Good Morning Britain,14–16 Nov,UK,1010,42%,28%,13%,3%,1%,3%,5%,–,–,4%,14%,2019
+Deltapoll/The Mail on Sunday,14–16 Nov,GB,1526,45%,30%,11%,3%,0%,2%,6%,2%,0%,0%,15%,2019
+,15 Nov,Nominations for candidates close (final candidates announced),Nominations for candidates close (final candidates announced),Nominations for candidates close (final candidates announced),Nominations for candidates close (final candidates announced),Nominations for candidates close (final candidates announced),Nominations for candidates close (final candidates announced),Nominations for candidates close (final candidates announced),Nominations for candidates close (final candidates announced),Nominations for candidates close (final candidates announced),Nominations for candidates close (final candidates announced),Nominations for candidates close (final candidates announced),Nominations for candidates close (final candidates announced),Nominations for candidates close (final candidates announced),2019
+YouGov/The Sunday Times,14–15 Nov,GB,1670,45%,28%,15%,4%,0%,3%,4%,–,–,2%,17%,2019
+Opinium/The Observer,13–15 Nov,GB,2008,44%,28%,14%,4%,1%,3%,6%,–,–,0%,16%,2019
+BMG/The Independent,12–15 Nov,GB,1506,37%,29%,16%,2%,0%,5%,9%,–,–,0%,8%,2019
+SavantaComRes/The Sunday Telegraph,13–14 Nov,GB,2052,41%,33%,14%,3%,0%,2%,5%,–,–,1%,8%,2019
+Panelbase,13–14 Nov,GB,1021,43%,30%,15%,4%,0%,2%,5%,–,–,0%,13%,2019
+SavantaComRes/The Daily Telegraph,11–12 Nov,GB,2022,40%,30%,16%,4%,0%,3%,7%,–,–,1%,10%,2019
+YouGov/The Times/Sky News,11–12 Nov,GB,1619,42%,28%,15%,3%,1%,4%,4%,–,–,4%,14%,2019
+ICM Research,8–11 Nov,GB,2035,39%,31%,15%,3%,0%,3%,8%,–,–,2%,8%,2019
+Kantar,7–11 Nov,GB,1165,37%,27%,17%,3%,1%,3%,9%,1%,1%,1%,10%,2019
+ComRes/Britain Elects,8–10 Nov,GB,2014,37%,29%,17%,4%,0%,3%,9%,–,–,1%,8%,2019
+Deltapoll/The Mail on Sunday,6–9 Nov,GB,1518,41%,29%,16%,3%,0%,2%,6%,1%,0%,1%,12%,2019
+YouGov/The Sunday Times,7–8 Nov,GB,1598,39%,26%,17%,4%,0%,4%,10%,–,–,0%,13%,2019
+Survation,6–8 Nov,UK,2037,35%,29%,17%,4%,1%,1%,10%,–,–,3%,6%,2019
+Opinium/The Observer,6–8 Nov,GB,2001,41%,29%,15%,5%,1%,2%,6%,–,–,0%,12%,2019
+Panelbase,6–8 Nov,GB,1046,40%,30%,15%,4%,0%,3%,8%,–,–,0%,10%,2019
+BMG/The Independent,5–8 Nov,GB,1504,37%,29%,16%,2%,0%,7%,9%,–,–,0%,8%,2019
+YouGov/The Times/Sky,5–6 Nov,GB,1667,36%,25%,17%,4%,1%,5%,11%,–,–,1%,11%,2019
+,6 Nov,Parliament dissolved and official campaign period begins,Parliament dissolved and official campaign period begins,Parliament dissolved and official campaign period begins,Parliament dissolved and official campaign period begins,Parliament dissolved and official campaign period begins,Parliament dissolved and official campaign period begins,Parliament dissolved and official campaign period begins,Parliament dissolved and official campaign period begins,Parliament dissolved and official campaign period begins,Parliament dissolved and official campaign period begins,Parliament dissolved and official campaign period begins,Parliament dissolved and official campaign period begins,Parliament dissolved and official campaign period begins,2019
+ComRes/Remain United,30 Oct–5 Nov,GB,6097,36%,29%,17%,4%,1%,3%,11%,0%,0%,0%,7%,2019
+YouGov/The Times,1–4 Nov,GB,3284,38%,25%,16%,4%,1%,5%,11%,0%,0%,0%,13%,2019
+ICM Research/Reuters,1–4 Nov,GB,2047,38%,31%,15%,3%,0%,3%,9%,1%,0%,1%,7%,2019
+Deltapoll/The Mail on Sunday,31 Oct–2 Nov,GB,1500,40%,28%,14%,3%,1%,2%,11%,1%,0%,0%,12%,2019
+Opinium/The Observer Archived 3 November 2019 at the Wayback Machine,30 Oct–1 Nov,GB,2004,42%,26%,16%,4%,1%,2%,9%,0%,0%,1%,16%,2019
+YouGov/The Sunday Times,30 Oct–1 Nov,GB,1834,39%,27%,16%,5%,1%,4%,7%,0%,0%,1%,12%,2019
+ComRes/Sunday Express,30–31 Oct,GB,2032,36%,28%,17%,4%,0%,3%,10%,0%,0%,1%,8%,2019
+ORB/The Sunday Telegraph,30–31 Oct,GB,2025,36%,28%,14%,5%,0%,4%,12%,0%,0%,1%,8%,2019
+Panelbase,30–31 Oct,GB,1008,40%,29%,14%,3%,0%,3%,9%,0%,0%,1%,11%,2019
+,30 Oct,The House of Commons votes for an early general election,The House of Commons votes for an early general election,The House of Commons votes for an early general election,The House of Commons votes for an early general election,The House of Commons votes for an early general election,The House of Commons votes for an early general election,The House of Commons votes for an early general election,The House of Commons votes for an early general election,The House of Commons votes for an early general election,The House of Commons votes for an early general election,The House of Commons votes for an early general election,The House of Commons votes for an early general election,The House of Commons votes for an early general election,2019
+YouGov/The Times,29–30 Oct,GB,1750,36%,21%,18%,4%,1%,6%,13%,0%,0%,1%,15%,2019
+Survation/Daily Mail,29–30 Oct,UK,1010,34%,26%,19%,4%,0%,1%,12%,0%,0%,4%,8%,2019
+,29 Oct,Richard Braine resigns as leader of UKIP[8],Richard Braine resigns as leader of UKIP[8],Richard Braine resigns as leader of UKIP[8],Richard Braine resigns as leader of UKIP[8],Richard Braine resigns as leader of UKIP[8],Richard Braine resigns as leader of UKIP[8],Richard Braine resigns as leader of UKIP[8],Richard Braine resigns as leader of UKIP[8],Richard Braine resigns as leader of UKIP[8],Richard Braine resigns as leader of UKIP[8],Richard Braine resigns as leader of UKIP[8],Richard Braine resigns as leader of UKIP[8],Richard Braine resigns as leader of UKIP[8],2019
+Ipsos MORI/Evening Standard,25–28 Oct,GB,1007,41%,24%,20%,4%,1%,3%,7%,0%,0%,0%,17%,2019
+YouGov,17–28 Oct,GB,11590,36%,22%,19%,4%,1%,6%,12%,0%,0%,0%,14%,2019
+YouGov/The Times,24–25 Oct,GB,1672,36%,23%,18%,4%,1%,6%,12%,0%,0%,0%,13%,2019
+Opinium/The Observer,23–25 Oct,GB,2001,40%,24%,15%,5%,0%,3%,10%,1%,0%,1%,16%,2019
+YouGov/The Times,20–21 Oct,GB,1689,37%,22%,19%,3%,1%,7%,11%,1%,0%,0%,15%,2019
+Deltapoll,18–21 Oct,GB,2017,37%,24%,19%,4%,1%,3%,11%,1%,0%,0%,13%,2019
+Panelbase,17–18 Oct,GB,1008,36%,27%,17%,4%,0%,3%,11%,0%,0%,0%,9%,2019
+Survation/Daily Mail,17–18 Oct,UK,1025,32%,24%,21%,4%,1%,2%,13%,0%,0%,4%,8%,2019
+ComRes/Britain Elects,16–17 Oct,GB,2067,33%,29%,18%,4%,1%,4%,12%,0%,0%,0%,4%,2019
+Opinium/The Observer Archived 12 November 2019 at the Wayback Machine,15–17 Oct,GB,2001,37%,24%,16%,4%,1%,4%,12%,2%,0%,1%,13%,2019
+YouGov/The Times,14–15 Oct,GB,1625,37%,22%,18%,4%,1%,5%,11%,1%,0%,0%,15%,2019
+Kantar,10–15 Oct,GB,1184,39%,25%,18%,3%,1%,3%,8%,1%,0%,1%,14%,2019
+Panelbase/The Sunday Times,9–11 Oct,GB,2013,33%,30%,17%,4%,0%,3%,12%,0%,0%,0%,3%,2019
+ComRes/Daily Express,9–10 Oct,GB,2018,33%,27%,18%,4%,0%,4%,12%,0%,0%,2%,6%,2019
+YouGov/The Times,8–9 Oct,GB,1616,35%,22%,20%,4%,1%,6%,12%,0%,1%,0%,13%,2019
+ICM Research/Represent Us,4–7 Oct,GB,2013,35%,29%,16%,3%,1%,4%,11%,1%,0%,1%,6%,2019
+ComRes/The Daily Telegraph,4–6 Oct,GB,2006,33%,27%,19%,4%,1%,3%,13%,1%,0%,1%,6%,2019
+Opinium/The Observer,3–4 Oct,GB,2006,38%,23%,15%,5%,0%,4%,12%,1%,0%,0%,15%,2019
+BMG/The Independent,1–4 Oct,GB,1514,31%,26%,20%,3%,1%,7%,11%,0%,0%,0%,5%,2019
+YouGov/The Times,30 Sep–1 Oct,GB,1623,34%,21%,23%,3%,1%,5%,12%,0%,0%,1%,11%,2019
+YouGov/The Sunday Times,26–27 Sep,GB,1623,33%,22%,21%,4%,1%,5%,13%,0%,0%,1%,11%,2019
+Opinium/The Observer Archived 29 September 2019 at the Wayback Machine,25–27 Sep,GB,2007,36%,24%,20%,5%,1%,2%,11%,0%,0%,1%,12%,2019
+Survation/Daily Mail,25 Sep,UK,1011,27%,24%,22%,4%,0%,3%,16%,0%,0%,4%,3%,2019
+YouGov/The Times,24–25 Sep,GB,1635,33%,22%,22%,3%,1%,6%,14%,0%,0%,0%,11%,2019
+YouGov/People's Vote,19–20 Sep,GB,2006,30%,23%,22%,4%,0%,5%,14%,0%,0%,1%,7%,2019
+Opinium/The Observer,19–20 Sep,GB,2004,37%,22%,17%,4%,1%,4%,12%,2%,0%,0%,15%,2019
+ComRes/Britain Elects,18–19 Sep,GB,2050,29%,27%,20%,4%,0%,4%,13%,0%,1%,0%,2%,2019
+YouGov/The Times,17–18 Sep,GB,1608,32%,21%,23%,4%,1%,4%,14%,1%,0%,2%,9%,2019
+Ipsos MORI/Evening Standard,13–16 Sep,GB,1006,33%,24%,23%,4%,4%,4%,10%,0%,0%,1%,9%,2019
+Opinium/The Observer,11–13 Sep,GB,2002,37%,25%,16%,4%,1%,2%,13%,1%,0%,0%,12%,2019
+ComRes/Sunday Express,11–12 Sep,GB,2057,28%,27%,20%,4%,1%,5%,13%,1%,1%,0%,1%,2019
+YouGov/The Times,9–10 Sep,GB,1676,32%,23%,19%,4%,0%,7%,14%,0%,0%,1%,9%,2019
+Kantar Archived 7 November 2019 at the Wayback Machine,5–9 Sep,GB,1144,38%,24%,20%,4%,1%,3%,7%,1%,1%,1%,14%,2019
+ComRes/The Daily Telegraph,6–8 Sep,GB,2016,30%,29%,17%,3%,1%,4%,13%,1%,0%,2%,1%,2019
+Deltapoll/The Sun on Sunday,5–7 Sep,GB,2049,31%,28%,17%,5%,1%,4%,13%,1%,0%,0%,3%,2019
+YouGov/The Sunday Times,5–6 Sep,GB,1676,35%,21%,19%,4%,0%,7%,12%,1%,0%,1%,14%,2019
+Panelbase,5–6 Sep,GB,1013,31%,28%,19%,3%,0%,2%,15%,0%,0%,0%,3%,2019
+Survation/Daily Mail,5–6 Sep,UK,1006,29%,24%,18%,4%,1%,3%,17%,0%,0%,5%,5%,2019
+ComRes/Britain Elects,4–6 Sep,GB,2009,31%,27%,20%,3%,1%,3%,13%,1%,0%,1%,4%,2019
+Opinium/The Observer,4–6 Sep,GB,2009,35%,25%,17%,5%,0%,3%,13%,1%,0%,1%,10%,2019
+BMG/The Independent,3–6 Sep,GB,1504,31%,27%,19%,3%,0%,6%,13%,1%,0%,0%,4%,2019
+Hanbury Strategy,3–4 Sep,GB,995,33%,26%,17%,4%,1%,3%,14%,0%,0%,2%,7%[b],2019
+YouGov/The Times,2–3 Sep,GB,1639,35%,25%,16%,4%,1%,7%,11%,1%,0%,0%,10%,2019
+ICM Research/Represent Us,30 Aug–3 Sep,GB,2041,37%,30%,16%,3%,1%,4%,9%,1%,0%,1%,7%,2019
+Deltapoll/The Mail on Sunday,29–31 Aug,GB,2028,35%,24%,18%,4%,1%,4%,14%,0%,1%,0%,11%,2019
+Survation/Daily Mail,29–30 Aug,UK,1020,31%,24%,21%,4%,1%,3%,14%,0%,0%,3%,7%,2019
+YouGov,28–29 Aug,GB,1867,33%,22%,21%,4%,1%,7%,12%,0%,0%,1%,11%,2019
+YouGov/The Times,27–28 Aug,GB,2006,34%,22%,17%,4%,1%,8%,13%,1%,0%,1%,12%,2019
+YouGov/The Sunday Times,22–23 Aug,GB,2019,33%,21%,19%,4%,1%,7%,14%,0%,0%,1%,12%,2019
+Opinium/The Observer,21–23 Aug,GB,2005,32%,26%,15%,5%,1%,4%,16%,1%,0%,1%,6%,2019
+YouGov/The Times,20–21 Aug,GB,1687,32%,22%,20%,4%,1%,7%,12%,0%,0%,2%,10%,2019
+Kantar Archived 21 August 2019 at the Wayback Machine,15–19 Aug,GB,1133,42%,28%,15%,5%,0%,3%,5%,0%,1%,1%,14%,2019
+YouGov/The Times,13–14 Aug,GB,1625,30%,21%,20%,4%,1%,8%,14%,1%,0%,2%,9%,2019
+BMG/The Independent,7–12 Aug,GB,1515,31%,25%,19%,3%,1%,6%,12%,1%,0%,2%,6%,2019
+ComRes/The Daily Telegraph,9–11 Aug,GB,2011,31%,27%,16%,3%,0%,4%,16%,1%,0%,2%,4%,2019
+Survation,6–11 Aug,UK,2040,28%,24%,21%,4%,0%,3%,15%,0%,0%,4%,4%,2019
+,10 Aug,Richard Braine becomes leader of UKIP[9],Richard Braine becomes leader of UKIP[9],Richard Braine becomes leader of UKIP[9],Richard Braine becomes leader of UKIP[9],Richard Braine becomes leader of UKIP[9],Richard Braine becomes leader of UKIP[9],Richard Braine becomes leader of UKIP[9],Richard Braine becomes leader of UKIP[9],Richard Braine becomes leader of UKIP[9],Richard Braine becomes leader of UKIP[9],Richard Braine becomes leader of UKIP[9],Richard Braine becomes leader of UKIP[9],Richard Braine becomes leader of UKIP[9],2019
+Opinium/The Observer,8–9 Aug,GB,2003,31%,28%,13%,4%,1%,5%,16%,1%,0%,0%,3%,2019
+YouGov/The Times,5–6 Aug,GB,1628,31%,22%,21%,4%,0%,7%,14%,0%,0%,1%,9%,2019
+,1 Aug,Brecon and Radnorshire by-election[10],Brecon and Radnorshire by-election[10],Brecon and Radnorshire by-election[10],Brecon and Radnorshire by-election[10],Brecon and Radnorshire by-election[10],Brecon and Radnorshire by-election[10],Brecon and Radnorshire by-election[10],Brecon and Radnorshire by-election[10],Brecon and Radnorshire by-election[10],Brecon and Radnorshire by-election[10],Brecon and Radnorshire by-election[10],Brecon and Radnorshire by-election[10],Brecon and Radnorshire by-election[10],2019
+YouGov/The Times,29–30 Jul,GB,2066,32%,22%,19%,4%,1%,8%,13%,0%,0%,1%,10%,2019
+Ipsos MORI,26–30 Jul,GB,1007,34%,24%,20%,4%,1%,6%,9%,1%,0%,1%,10%,2019
+ComRes/Britain Elects,26–28 Jul,GB,2004,29%,30%,16%,3%,1%,5%,15%,1%,0%,2%,1%,2019
+Deltapoll/The Mail on Sunday,25–27 Jul,GB,2001,30%,25%,18%,4%,1%,4%,14%,1%,2%,1%,5%,2019
+YouGov/The Sunday Times,25–26 Jul,GB,1697,31%,21%,20%,5%,1%,8%,13%,0%,0%,1%,10%,2019
+Opinium/The Observer,24–26 Jul,GB,2006,30%,28%,16%,5%,1%,5%,15%,1%,0%,1%,2%,2019
+ComRes/Sunday Express,24–25 Jul,GB,2029,28%,27%,19%,3%,1%,4%,16%,1%,0%,0%,1%,2019
+YouGov/The Times,23–24 Jul,GB,1715,25%,19%,23%,4%,1%,9%,17%,1%,0%,1%,2%,2019
+,23 Jul,"Boris Johnson becomes leader of the Conservative Party, and Prime Minister the next day","Boris Johnson becomes leader of the Conservative Party, and Prime Minister the next day","Boris Johnson becomes leader of the Conservative Party, and Prime Minister the next day","Boris Johnson becomes leader of the Conservative Party, and Prime Minister the next day","Boris Johnson becomes leader of the Conservative Party, and Prime Minister the next day","Boris Johnson becomes leader of the Conservative Party, and Prime Minister the next day","Boris Johnson becomes leader of the Conservative Party, and Prime Minister the next day","Boris Johnson becomes leader of the Conservative Party, and Prime Minister the next day","Boris Johnson becomes leader of the Conservative Party, and Prime Minister the next day","Boris Johnson becomes leader of the Conservative Party, and Prime Minister the next day","Boris Johnson becomes leader of the Conservative Party, and Prime Minister the next day","Boris Johnson becomes leader of the Conservative Party, and Prime Minister the next day","Boris Johnson becomes leader of the Conservative Party, and Prime Minister the next day",2019
+,22 Jul,Jo Swinson becomes leader of the Liberal Democrats[11],Jo Swinson becomes leader of the Liberal Democrats[11],Jo Swinson becomes leader of the Liberal Democrats[11],Jo Swinson becomes leader of the Liberal Democrats[11],Jo Swinson becomes leader of the Liberal Democrats[11],Jo Swinson becomes leader of the Liberal Democrats[11],Jo Swinson becomes leader of the Liberal Democrats[11],Jo Swinson becomes leader of the Liberal Democrats[11],Jo Swinson becomes leader of the Liberal Democrats[11],Jo Swinson becomes leader of the Liberal Democrats[11],Jo Swinson becomes leader of the Liberal Democrats[11],Jo Swinson becomes leader of the Liberal Democrats[11],Jo Swinson becomes leader of the Liberal Democrats[11],2019
+YouGov/The Times,16–17 Jul,GB,1749,25%,21%,20%,4%,1%,8%,19%,0%,0%,1%,4%,2019
+ComRes/Britain Elects,15–16 Jul,GB,2038,25%,28%,17%,4%,0%,5%,19%,1%,1%,1%,3%,2019
+ComRes/Sunday Express,10–11 Jul,GB,1791,24%,28%,15%,3%,1%,5%,20%,1%,1%,2%,4%,2019
+Survation,10–11 Jul,GB,1012,23%,29%,19%,4%,1%,3%,20%,–,–,1%,6%,2019
+YouGov/The Times,9–10 Jul,GB,1671,24%,20%,19%,5%,1%,9%,21%,0%,0%,1%,3%,2019
+ComRes/The Daily Telegraph,5–7 Jul,GB,2010,25%,28%,16%,3%,0%,5%,19%,1%,0%,1%,3%,2019
+Opinium/The Observer,3–5 Jul,GB,2002,23%,25%,15%,5%,1%,8%,22%,1%,1%,0%,2%,2019
+BMG/The Independent,2–5 Jul,GB,1532,28%,27%,18%,2%,1%,6%,14%,2%,1%,0%,1%,2019
+YouGov/The Times,2–3 Jul,GB,1605,24%,18%,20%,4%,1%,9%,23%,0%,0%,1%,1%,2019
+YouGov/The Times,24–25 Jun,GB,2059,22%,20%,19%,4%,1%,10%,22%,1%,0%,1%,Tie,2019
+Ipsos MORI,21–25 Jun,GB,1043,26%,24%,22%,4%,1%,8%,12%,1%,0%,0%,2%,2019
+Opinium/The Observer,19–20 Jun,GB,2009,20%,26%,16%,4%,1%,6%,23%,2%,1%,1%,3%,2019
+Survation/The Mail on Sunday,19–20 Jun,GB,2016,24%,26%,18%,3%,1%,6%,20%,1%,1%,1%,2%,2019
+YouGov/The Times,18–19 Jun,GB,1641,20%,20%,21%,4%,1%,9%,23%,1%,0%,0%,2%,2019
+YouGov/The Sunday Times,13–14 Jun,GB,1672,21%,21%,19%,3%,1%,9%,24%,0%,0%,1%,3%,2019
+YouGov/The Times,9–10 Jun,GB,1702,17%,19%,22%,4%,1%,8%,26%,0%,1%,1%,4%,2019
+ComRes/The Daily Telegraph,7–9 Jun,GB,2017,23%,27%,17%,3%,1%,5%,22%,1%,1%,1%,4%,2019
+BMG/The Independent,4–7 Jun,GB,1520,26%,27%,17%,3%,1%,6%,18%,1%,1%,1%,1%,2019
+,6 Jun,Peterborough by-election[10],Peterborough by-election[10],Peterborough by-election[10],Peterborough by-election[10],Peterborough by-election[10],Peterborough by-election[10],Peterborough by-election[10],Peterborough by-election[10],Peterborough by-election[10],Peterborough by-election[10],Peterborough by-election[10],Peterborough by-election[10],Peterborough by-election[10],2019
+YouGov/The Times,5–6 Jun,GB,1670,18%,20%,20%,5%,0%,9%,26%,1%,0%,0%,6%,2019
+YouGov,4–5 Jun,GB,1663,18%,19%,22%,4%,0%,9%,25%,0%,–,3%,3%,2019
+,4 Jun,Anna Soubry becomes leader of Change UK after six of its MPs leave the party[12],Anna Soubry becomes leader of Change UK after six of its MPs leave the party[12],Anna Soubry becomes leader of Change UK after six of its MPs leave the party[12],Anna Soubry becomes leader of Change UK after six of its MPs leave the party[12],Anna Soubry becomes leader of Change UK after six of its MPs leave the party[12],Anna Soubry becomes leader of Change UK after six of its MPs leave the party[12],Anna Soubry becomes leader of Change UK after six of its MPs leave the party[12],Anna Soubry becomes leader of Change UK after six of its MPs leave the party[12],Anna Soubry becomes leader of Change UK after six of its MPs leave the party[12],Anna Soubry becomes leader of Change UK after six of its MPs leave the party[12],Anna Soubry becomes leader of Change UK after six of its MPs leave the party[12],Anna Soubry becomes leader of Change UK after six of its MPs leave the party[12],Anna Soubry becomes leader of Change UK after six of its MPs leave the party[12],2019
+YouGov,31 May–1 Jun,GB,1644,18%,19%,23%,5%,0%,10%,23%,–,–,2%,Tie,2019
+Deltapoll/The Mail on Sunday,29–30 May,GB,2449,20%,26%,16%,4%,1%,5%,24%,1%,4%,1%,2%,2019
+Opinium/The Observer,28–30 May,GB,2005,17%,22%,16%,4%,1%,11%,26%,1%,1%,1%,4%,2019
+YouGov/The Times,28–29 May,GB,1763,19%,19%,24%,6%,6%,8%,22%,1%,1%,0%,2%,2019
+,23 May,European Parliament election[13],European Parliament election[13],European Parliament election[13],European Parliament election[13],European Parliament election[13],European Parliament election[13],European Parliament election[13],European Parliament election[13],European Parliament election[13],European Parliament election[13],European Parliament election[13],European Parliament election[13],European Parliament election[13],2019
+Survation/Daily Mail,22 May,UK,2029,28%,33%,13%,3%,0%,3%,12%,3%,2%,3%,5%,2019
+Number Cruncher Politics,18–21 May,GB,1005,27%,31%,15%,5%,1%,4%,14%,1%,2%,0%,4%,2019
+Panelbase/The Sunday Times,14–21 May,GB,2033,21%,31%,13%,4%,0%,5%,19%,3%,4%,0%,10%,2019
+Opinium,17–20 May,GB,2005,22%,26%,12%,4%,1%,4%,25%,2%,2%,0%,4%,2019
+Survation/Daily Mail,17 May,UK,1000,27%,32%,13%,5%,0%,3%,13%,2%,2%,4%,5%,2019
+YouGov/Best for Britain/Hope Not Hate,8–17 May,GB,9260,24%,24%,18%,4%,1%,6%,18%,2%,2%,1%,Tie,2019
+Opinium/The Observer,14–16 May,GB,2009,22%,29%,11%,4%,0%,3%,24%,2%,3%,1%,7%,2019
+YouGov/The Times,13–14 May,GB,1655,25%,25%,16%,5%,5%,7%,18%,2%,2%,1%,Tie,2019
+Ipsos MORI,10–14 May,GB,1072,25%,27%,15%,4%,1%,7%,16%,3%,2%,1%,2%,2019
+Hanbury Strategy/Politico,9–13 May,GB,2000,21%,30%,13%,4%,–,5%,19%,2%,6%,1%,9%,2019
+Kantar Archived 25 May 2019 at the Wayback Machine,9–13 May,GB,1152,25%,34%,15%,5%,2%,3%,10%,4%,1%,2%,9%,2019
+ComRes/The Daily Telegraph,10–12 May,GB,2028,20%,27%,13%,3%,0%,4%,20%,4%,6%,1%,7%,2019
+Opinium/The Observer,8–10 May,GB,2004,22%,28%,11%,4%,0%,6%,21%,4%,4%,0%,6%,2019
+BMG/The Independent,7–10 May,GB,1541,27%,30%,18%,2%,0%,6%,10%,3%,3%,1%,3%,2019
+ComRes/Brexit Express,9 May,GB,2034,19%,27%,14%,3%,1%,5%,20%,3%,7%,1%,8%,2019
+YouGov/The Times,8–9 May,GB,2212,24%,24%,16%,5%,5%,7%,18%,2%,2%,1%,Tie,2019
+Opinium/People's Vote,3–7 May,GB,2000,25%,30%,11%,3%,1%,5%,17%,4%,2%,1%,5%,2019
+,2 May,Local elections in England and Northern Ireland[14][15],Local elections in England and Northern Ireland[14][15],Local elections in England and Northern Ireland[14][15],Local elections in England and Northern Ireland[14][15],Local elections in England and Northern Ireland[14][15],Local elections in England and Northern Ireland[14][15],Local elections in England and Northern Ireland[14][15],Local elections in England and Northern Ireland[14][15],Local elections in England and Northern Ireland[14][15],Local elections in England and Northern Ireland[14][15],Local elections in England and Northern Ireland[14][15],Local elections in England and Northern Ireland[14][15],Local elections in England and Northern Ireland[14][15],2019
+YouGov,29–30 Apr,GB,1630,29%,29%,13%,4%,4%,5%,15%,2%,3%,1%,Tie,2019
+YouGov/The Times,23–24 Apr,GB,1787,27%,30%,11%,5%,5%,5%,14%,4%,3%,1%,3%,2019
+Panelbase/The Sunday Times,18–24 Apr,GB,2030,27%,36%,8%,4%,–,3%,13%,5%,4%,1%,9%,2019
+Opinium/The Observer Archived 17 May 2019 at the Wayback Machine,21–23 Apr,GB,2004,26%,33%,6%,5%,1%,4%,17%,4%,4%,1%,7%,2019
+ORB/The Daily Telegraph,16–17 Apr,UK,1546,26%,29%,8%,4%,1%,4%,14%,5%,5%,4%[c],3%,2019
+YouGov/The Times,16–17 Apr,GB,1755,29%,30%,10%,5%,5%,5%,12%,4%,3%,2%,1%,2019
+ComRes/Brexit Express,16 Apr,GB,1061,23%,33%,7%,3%,1%,3%,14%,5%,9%,1%,10%,2019
+Opinium/The Observer,9–12 Apr,GB,2007,29%,36%,8%,5%,1%,4%,–,11%,–,6%,7%,2019
+YouGov/The Times,10–11 Apr,GB,1843,28%,32%,11%,5%,5%,5%,8%,6%,3%,2%,4%,2019
+Hanbury Strategy/Open Europe,5–8 Apr,GB,2000,31%,40%,8%,4%,1%,5%,–,8%,–,4%,9%,2019
+Kantar Archived 26 June 2019 at the Wayback Machine,4–8 Apr,GB,1172,32%,35%,11%,5%,1%,4%,–,7%,–,6%,3%,2019
+Survation,3–8 Apr,E+W,6062,37%,41%,10%,–,1%,2%,–,7%,1%,2%,4%,2019
+ComRes/The Daily Telegraph,5–7 Apr,GB,2018,32%,32%,7%,3%,0%,3%,–,9%,9%,3%,Tie,2019
+BMG/The Independent,2–5 Apr,GB,1500,29%,31%,8%,3%,1%,4%,6%,7%,8%,1%,2%,2019
+BMG/The Independent,2–5 Apr,GB,1500,35%,34%,11%,4%,1%,5%,–,6%,–,3%,1%,2019
+,4 Apr,Newport West by-election[10],Newport West by-election[10],Newport West by-election[10],Newport West by-election[10],Newport West by-election[10],Newport West by-election[10],Newport West by-election[10],Newport West by-election[10],Newport West by-election[10],Newport West by-election[10],Newport West by-election[10],Newport West by-election[10],Newport West by-election[10],2019
+YouGov/The Times,2–3 Apr,GB,1771,32%,31%,12%,6%,6%,4%,5%,7%,–,3%,1%,2019
+Deltapoll/The Mail on Sunday,28–30 Mar,GB,1010,32%,35%,7%,2%,1%,2%,6%,6%,9%,1%,3%,2019
+Deltapoll/The Mail on Sunday,28–30 Mar,GB,1010,36%,41%,7%,3%,1%,3%,–,7%,–,3%,5%,2019
+Opinium/The Observer Archived 16 May 2019 at the Wayback Machine,28–29 Mar,GB,2008,35%,35%,9%,4%,0%,5%,–,9%,–,3%,Tie,2019
+YouGov/The Times,24–25 Mar,GB,2110,36%,33%,11%,5%,5%,4%,5%,4%,–,2%,3%,2019
+ComRes/Leave Means Leave,22–24 Mar,GB,2030,33%,33%,8%,3%,1%,3%,–,7%,9%,3%,Tie,2019
+Opinium/The Observer,20–22 Mar,GB,2002,36%,35%,7%,5%,1%,4%,–,9%,–,3%,1%,2019
+ComRes/Daily Express,20–21 Mar,GB,2063,34%,35%,8%,3%,1%,4%,–,7%,6%,3%,1%,2019
+Ipsos MORI,15–19 Mar,GB,1050,38%,34%,8%,5%,1%,4%,1%,7%,2%,0%,4%,2019
+ComRes/The Daily Telegraph,15–17 Mar,GB,2033,34%,35%,8%,3%,1%,3%,–,6%,7%,3%,1%,2019
+Survation/Daily Mail,15 Mar,UK,1007,35%,39%,10%,3%,0%,–,–,–,–,12%,4%,2019
+YouGov/People's Vote,14–15 Mar,GB,1823,35%,33%,11%,–,–,–,–,–,–,21%,2%,2019
+YouGov/The Times,14–15 Mar,GB,1756,35%,31%,12%,4%,4%,4%,4%,6%,–,2%,4%,2019
+Opinium/The Observer,13–15 Mar,GB,2003,35%,35%,7%,5%,0%,4%,–,8%,4%,2%,Tie,2019
+Opinium/The Observer,12–15 Mar,GB,2008,38%,34%,8%,5%,1%,3%,–,8%,–,3%,4%,2019
+Kantar,7–11 Mar,GB,1152,41%,31%,8%,5%,0%,6%,–,6%,–,2%,10%,2019
+BMG/The Independent,4–8 Mar,GB,1510,37%,31%,10%,3%,1%,5%,–,6%,5%,1%,6%,2019
+BMG/The Independent,4–8 Mar,GB,1510,39%,34%,12%,3%,1%,4%,–,5%,–,2%,5%,2019
+ComRes/Brexit Express,4–5 Mar,GB,2042,36%,34%,8%,3%,0%,3%,–,6%,8%,2%,2%,2019
+YouGov/The Times,3–4 Mar,GB,2172,40%,31%,11%,5%,5%,4%,3%,3%,–,3%,9%,2019
+Opinium/The Observer,26 Feb–1 Mar,GB,2004,37%,33%,7%,4%,1%,4%,–,7%,5%,2%,4%,2019
+Opinium/The Observer,26 Feb–1 Mar,GB,2003,40%,34%,9%,4%,1%,3%,–,7%,–,3%,6%,2019
+YouGov/The Times,22–23 Feb,GB,1672,41%,30%,10%,5%,5%,4%,2%,5%,–,3%,11%,2019
+YouGov/The Times,22–23 Feb,GB,1672,36%,23%,6%,–,–,–,–,–,18%,16%,13%,2019
+Deltapoll/The Mail on Sunday,21–23 Feb,GB,1027,39%,31%,5%,5%,0%,3%,–,4%,11%,1%,8%,2019
+Deltapoll/The Mail on Sunday,21–23 Feb,GB,1027,43%,36%,6%,4%,0%,3%,–,5%,–,2%,7%,2019
+Opinium/The Observer,20–22 Feb,GB,2008,40%,32%,5%,4%,1%,4%,–,7%,6%,2%,8%,2019
+Sky Data,19 Feb,UK,1034,32%,26%,9%,4%,1%,4%,–,6%,10%,7%,6%,2019
+YouGov/The Times,18–19 Feb,GB,1861,38%,26%,7%,–,–,–,–,–,14%,15%,12%,2019
+YouGov/The Times,18–19 Feb,GB,1861,41%,33%,10%,5%,5%,4%,–,4%,–,3%,8%,2019
+Survation/Daily Mail,18 Feb,UK,1023,40%,36%,10%,3%,–,2%,–,5%,–,5%,4%,2019
+,18 Feb,"Eight Labour MPs, soon joined by three Conservatives, quit their party to form Change UK[16]","Eight Labour MPs, soon joined by three Conservatives, quit their party to form Change UK[16]","Eight Labour MPs, soon joined by three Conservatives, quit their party to form Change UK[16]","Eight Labour MPs, soon joined by three Conservatives, quit their party to form Change UK[16]","Eight Labour MPs, soon joined by three Conservatives, quit their party to form Change UK[16]","Eight Labour MPs, soon joined by three Conservatives, quit their party to form Change UK[16]","Eight Labour MPs, soon joined by three Conservatives, quit their party to form Change UK[16]","Eight Labour MPs, soon joined by three Conservatives, quit their party to form Change UK[16]","Eight Labour MPs, soon joined by three Conservatives, quit their party to form Change UK[16]","Eight Labour MPs, soon joined by three Conservatives, quit their party to form Change UK[16]","Eight Labour MPs, soon joined by three Conservatives, quit their party to form Change UK[16]","Eight Labour MPs, soon joined by three Conservatives, quit their party to form Change UK[16]","Eight Labour MPs, soon joined by three Conservatives, quit their party to form Change UK[16]",2019
+Opinium/The Observer,13–15 Feb,GB,2005,37%,37%,8%,4%,0%,4%,–,7%,–,2%,Tie,2019
+Kantar,7–11 Feb,GB,1145,40%,35%,10%,4%,1%,4%,–,3%,–,3%,5%,2019
+BMG,4–8 Feb,GB,1503,38%,35%,13%,3%,1%,5%,–,5%,–,1%,3%,2019
+YouGov/The Times,2–7 Feb,GB,40119,39%,34%,11%,3%,1%,4%,–,5%,–,2%,5%,2019
+,5 Feb,The Brexit Party is registered with the Electoral Commission[17],The Brexit Party is registered with the Electoral Commission[17],The Brexit Party is registered with the Electoral Commission[17],The Brexit Party is registered with the Electoral Commission[17],The Brexit Party is registered with the Electoral Commission[17],The Brexit Party is registered with the Electoral Commission[17],The Brexit Party is registered with the Electoral Commission[17],The Brexit Party is registered with the Electoral Commission[17],The Brexit Party is registered with the Electoral Commission[17],The Brexit Party is registered with the Electoral Commission[17],The Brexit Party is registered with the Electoral Commission[17],The Brexit Party is registered with the Electoral Commission[17],The Brexit Party is registered with the Electoral Commission[17],2019
+Ipsos MORI,1–5 Feb,GB,1005,38%,38%,10%,4%,1%,3%,–,4%,–,3%,Tie,2019
+YouGov/The Times,3–4 Feb,GB,1851,41%,34%,10%,4%,0%,4%,–,4%,–,2%,7%,2019
+Opinium/The Observer,30 Jan–1 Feb,GB,2008,41%,34%,8%,4%,1%,4%,–,7%,–,1%,7%,2019
+Survation/Daily Mail,30 Jan,UK,1029,38%,39%,9%,3%,0%,2%,–,4%,–,4%,1%,2019
+Opinium/People's Vote,23–25 Jan,GB,2001,40%,36%,7%,3%,0%,4%,–,7%,–,1%,4%,2019
+ICM,16–18 Jan,GB,2046,39%,40%,9%,3%,0%,3%,–,5%,–,1%,1%,2019
+Opinium/The Observer,16–18 Jan,GB,2006,37%,40%,7%,5%,1%,4%,–,7%,–,1%,3%,2019
+ComRes/Sunday Mirror/Sunday Express,16–17 Jan,GB,2031,38%,37%,10%,3%,1%,3%,–,6%,–,1%,1%,2019
+Number Cruncher Politics,10–17 Jan,UK,1030,41%,39%,8%,3%,1%,2%,–,4%,–,1%,2%,2019
+ComRes/Daily Express,14–15 Jan,GB,2010,37%,39%,8%,3%,0%,3%,–,7%,–,1%,2%,2019
+YouGov/The Times,13–14 Jan,GB,1701,39%,34%,11%,4%,1%,4%,–,6%,–,1%,5%,2019
+Kantar,10–14 Jan,GB,1106,35%,38%,9%,4%,1%,4%,–,6%,–,3%,3%,2019
+Survation/Daily Mail,10–11 Jan,UK,1013,38%,41%,10%,3%,0%,2%,–,4%,–,3%,3%,2019
+BMG/The Independent,8–11 Jan,GB,1514,36%,36%,12%,3%,1%,5%,–,6%,–,1%,Tie,2019
+YouGov/The Times,6–7 Jan,GB,1656,41%,35%,11%,4%,0%,3%,–,4%,–,1%,6%,2019
+YouGov/People's Vote,21 Dec–4 Jan,UK,25537,40%,34%,10%,4%,0%,4%,–,4%,–,2%,6%,2019
+Opinium/The Observer,18–20 Dec,GB,2000,39%,39%,6%,4%,0%,4%,,6%,,1%,Tie,2018
+YouGov/The Times,16–17 Dec,GB,1660,41%,39%,7%,5%,5%,3%,,4%,,1%,2%,2018
+YouGov/Hope Not Hate,14–15 Dec,GB,1660,38%,35%,10%,6%,6%,5%,,4%,,2%,3%,2018
+Opinium/The Observer,13–14 Dec,GB,2016,38%,39%,8%,4%,1%,4%,,6%,,1%,1%,2018
+YouGov/People's Vote,12–14 Dec,GB,5043,40%,36%,10%,5%,5%,3%,,4%,,1%,4%,2018
+Populus/Best for Britain,10–11 Dec,GB,2002,37%,40%,7%,3%,1%,3%,,6%,,1%,3%,2018
+YouGov,9–10 Dec,GB,2008,39%,38%,9%,5%,5%,4%,,5%,,1%,1%,2018
+YouGov/The Sunday Times,6–7 Dec,GB,1652,38%,37%,10%,5%,5%,4%,,3%,,1%,1%,2018
+BMG/The Independent,4–7 Dec,GB,1508,37%,38%,12%,3%,1%,4%,,4%,,1%,1%,2018
+Kantar,5–6 Dec,GB,1178,38%,38%,9%,4%,1%,5%,,5%,,1%,Tie,2018
+Ipsos MORI,30 Nov–5 Dec,GB,1049,38%,38%,9%,4%,1%,5%,,4%,,1%,Tie,2018
+YouGov/The Times,3–4 Dec,GB,1624,40%,38%,9%,5%,5%,4%,,4%,,1%,2%,2018
+ComRes/Daily Express,30 Nov–2 Dec,GB,2035,37%,39%,9%,3%,0%,3%,,6%,,1%,2%,2018
+YouGov/The Times,26–27 Nov,GB,1737,40%,35%,10%,4%,4%,3%,,6%,,1%,5%,2018
+YouGov/The Times,18–19 Nov,GB,1671,39%,36%,8%,6%,6%,4%,,4%,,1%,3%,2018
+ComRes/Sunday Mirror/Sunday Express,14–15 Nov,GB,2000,36%,40%,9%,3%,1%,3%,,7%,,1%,4%,2018
+Opinium/The Observer Archived 19 November 2018 at the Wayback Machine,14–15 Nov,GB,2003,36%,39%,7%,5%,1%,3%,,8%,,1%,3%,2018
+Kantar,8–12 Nov,GB,1147,40%,39%,8%,4%,1%,3%,,3%,,2%,1%,2018
+BMG/The Independent,6–9 Nov,GB,1506,36%,37%,12%,3%,1%,4%,,6%,,1%,1%,2018
+Panelbase/Constitutional Commission,2–7 Nov,GB,2016,40%,40%,8%,4%,1%,3%,,5%,,–,Tie,2018
+YouGov/The Times,4–5 Nov,GB,1637,41%,37%,8%,4%,4%,4%,,4%,,1%,4%,2018
+Survation/Channel 4,20 Oct–2 Nov,UK,20090,39%,40%,8%,3%,–,2%,,3%,,3%,1%,2018
+YouGov/The Times,29–30 Oct,GB,1648,41%,39%,7%,4%,4%,2%,,5%,,0%,2%,2018
+ICM,26–28 Oct,GB,2048,40%,38%,9%,3%,1%,3%,,5%,,0%,2%,2018
+Deltapoll/Daily Mirror,24–26 Oct,GB,1017,43%,40%,6%,4%,0%,2%,,5%,,0%,3%,2018
+YouGov/The Times,22–23 Oct,GB,1802,41%,36%,8%,6%,6%,4%,,4%,,1%[d],5%,2018
+Ipsos MORI,19–22 Oct,GB,1044,39%,37%,10%,4%,1%,5%,,5%,,0%,2%,2018
+YouGov/The Times,14–15 Oct,GB,1649,41%,36%,9%,4%,4%,3%,,4%,,1%,5%,2018
+Kantar,11–15 Oct,GB,1128,41%,36%,10%,4%,1%,4%,,3%,,2%,5%,2018
+Opinium/The Observer,11–12 Oct,GB,2010,41%,37%,8%,4%,1%,3%,,6%,,1%,4%,2018
+Survation,10 Oct,UK,1009,40%,39%,7%,4%,–,–,,6%,,5%,1%,2018
+YouGov/The Times,8–9 Oct,GB,1647,41%,37%,9%,5%,5%,3%,,4%,,2%[e],4%,2018
+BMG/The Independent,3–5 Oct,GB,1503,38%,39%,10%,4%,1%,4%,,4%,,0%,1%,2018
+Opinium/The Observer Archived 7 October 2018 at the Wayback Machine,3–5 Oct,GB,2007,39%,39%,7%,3%,1%,3%,,6%,,1%,Tie,2018
+YouGov/The Times,30 Sep–1 Oct,GB,1607,42%,36%,9%,4%,4%,2%,,5%,,2%[d],6%,2018
+BMG/HuffPost UK,28–29 Sep,GB,1203,35%,40%,12%,4%,1%,3%,,5%,,1%,5%,2018
+,28 Sep,Adam Price officially becomes leader of Plaid Cymru[18],Adam Price officially becomes leader of Plaid Cymru[18],Adam Price officially becomes leader of Plaid Cymru[18],Adam Price officially becomes leader of Plaid Cymru[18],Adam Price officially becomes leader of Plaid Cymru[18],Adam Price officially becomes leader of Plaid Cymru[18],Adam Price officially becomes leader of Plaid Cymru[18],Adam Price officially becomes leader of Plaid Cymru[18],,Adam Price officially becomes leader of Plaid Cymru[18],,Adam Price officially becomes leader of Plaid Cymru[18],Adam Price officially becomes leader of Plaid Cymru[18],2018
+Opinium/The Observer,26–28 Sep,GB,2008,39%,36%,9%,4%,0%,3%,,6%,,1%,3%,2018
+ComRes/Daily Express,26–27 Sep,GB,2036,39%,40%,9%,3%,1%,2%,,5%,,1%,1%,2018
+YouGov/The Times,24–25 Sep,GB,1625,42%,36%,11%,4%,4%,2%,,4%,,0%,6%,2018
+ICM/The Guardian,21–24 Sep,GB,2006,41%,40%,9%,3%,0%,3%,,4%,,0%,1%,2018
+BMG/HuffPost UK,21–22 Sep,GB,1006,38%,38%,10%,4%,0%,4%,,5%,,0%,Tie,2018
+Opinium/The Observer,18–20 Sep,GB,2003,37%,39%,9%,4%,1%,2%,,8%,,1%,2%,2018
+YouGov/The Times,18–19 Sep,GB,2509,40%,36%,11%,5%,5%,2%,,5%,,1%,4%,2018
+Ipsos MORI,14–18 Sep,GB,1070,39%,37%,13%,3%,0%,5%,,2%,,1%,2%,2018
+YouGov/The Times,12–13 Sep,GB,1620,40%,36%,11%,4%,4%,3%,,4%,,1%,4%,2018
+Opinium/The Observer,11–13 Sep,GB,2011,39%,38%,7%,4%,1%,3%,,6%,,1%,1%,2018
+Kantar,6–10 Sep,GB,1119,40%,35%,10%,4%,0%,4%,,5%,,1%,5%,2018
+ICM/The Guardian,7–9 Sep,GB,2051,42%,39%,8%,3%,0%,3%,,4%,,0%,3%,2018
+Survation/Daily Mail,7 Sep,UK,1039,38%,37%,10%,3%,1%,1%,,4%,,5%,1%,2018
+BMG/The Independent,4–7 Sep,GB,1533,37%,38%,11%,2%,1%,4%,,7%,,1%,1%,2018
+,29 Oct,Jonathan Bartley and Siân Berry become co-leaders of the Green Party[19],Jonathan Bartley and Siân Berry become co-leaders of the Green Party[19],Jonathan Bartley and Siân Berry become co-leaders of the Green Party[19],Jonathan Bartley and Siân Berry become co-leaders of the Green Party[19],Jonathan Bartley and Siân Berry become co-leaders of the Green Party[19],Jonathan Bartley and Siân Berry become co-leaders of the Green Party[19],Jonathan Bartley and Siân Berry become co-leaders of the Green Party[19],Jonathan Bartley and Siân Berry become co-leaders of the Green Party[19],,Jonathan Bartley and Siân Berry become co-leaders of the Green Party[19],,Jonathan Bartley and Siân Berry become co-leaders of the Green Party[19],Jonathan Bartley and Siân Berry become co-leaders of the Green Party[19],2018
+YouGov/The Times,3–4 Sep,GB,1883,39%,35%,11%,5%,5%,4%,,5%,,1%,4%,2018
+Survation,31 Aug–1 Sep,UK,1017,37%,41%,6%,3%,1%,2%,,7%,,3%,4%,2018
+YouGov/The Times,28–29 Aug,GB,1664,39%,37%,10%,4%,4%,3%,,5%,,2%[d],2%,2018
+YouGov/The Times,20–21 Aug,GB,1697,40%,37%,9%,5%,5%,2%,,6%,,2%[d],3%,2018
+ICM/The Guardian,17–19 Aug,GB,2021,40%,40%,8%,3%,0%,2%,,6%,,1%,Tie,2018
+Opinium/The Observer,14–17 Aug,GB,2003,39%,38%,7%,4%,1%,3%,,7%,,1%,1%,2018
+Deltapoll/The Sun on Sunday,14–16 Aug,GB,1904,37%,40%,8%,3%,1%,5%,,6%,,1%,3%,2018
+YouGov/The Times,13–14 Aug,GB,1660,41%,38%,8%,4%,4%,3%,,6%,,1%,3%,2018
+Kantar,9–13 Aug,GB,1119,40%,39%,9%,4%,1%,3%,,4%,,1%,1%,2018
+Number Cruncher Politics,9–13 Aug,UK,1036,38%,40%,8%,4%,1%,2%,,5%,,1%,2%,2018
+BMG/The Independent,6–10 Aug,GB,1481,37%,39%,10%,3%,0%,5%,,5%,,0%,2%,2018
+YouGov/The Times,8–9 Aug,GB,1675,39%,35%,10%,5%,5%,3%,,7%,,1%,4%,2018
+ICM/The Guardian,3–5 Aug,GB,2049,39%,40%,7%,4%,0%,3%,,6%,,0%,1%,2018
+YouGov/The Times,30–31 Jul,GB,1718,38%,38%,10%,4%,4%,3%,,6%,,1%,Tie,2018
+Ipsos MORI,20–24 Jul,GB,1023,38%,38%,10%,4%,1%,3%,,6%,,1%,Tie,2018
+YouGov/The Times,22–23 Jul,GB,1650,38%,38%,10%,4%,4%,3%,,6%,,0%,Tie,2018
+ICM/The Guardian,20–22 Jul,GB,2010,40%,41%,8%,3%,0%,3%,,5%,,1%,1%,2018
+YouGov/The Sunday Times,19–20 Jul,GB,1668,38%,39%,9%,5%,5%,2%,,6%,,1%,1%,2018
+YouGov/The Times,16–17 Jul,GB,1657,36%,41%,9%,4%,4%,2%,,7%,,0%,5%,2018
+Deltapoll/The Sun on Sunday,12–14 Jul,GB,1484,37%,42%,7%,3%,1%,3%,,6%,,1%,5%,2018
+Opinium/The Observer Archived 16 September 2019 at the Wayback Machine,10–13 Jul,GB,2005,36%,40%,8%,4%,1%,3%,,8%,,1%,4%,2018
+YouGov/The Times,10–11 Jul,GB,1732,37%,39%,10%,4%,4%,3%,,6%,,1%,2%,2018
+YouGov/The Times,8–9 Jul,GB,1669,39%,39%,9%,4%,4%,3%,,5%,,1%,Tie,2018
+ICM/The Guardian,6–9 Jul,GB,2013,41%,39%,9%,3%,0%,3%,,4%,,1%,2%,2018
+Kantar,5–9 Jul,GB,1086,40%,38%,9%,4%,1%,3%,,3%,,2%,2%,2018
+Survation/The Mail on Sunday,7 Jul,UK,1007,38%,40%,10%,3%,1%,–,,–,,8%,2%,2018
+BMG/The Independent,3–5 Jul,GB,1511,39%,37%,10%,3%,1%,4%,,3%,,1%,2%,2018
+YouGov/The Times,3–4 Jul,GB,1641,41%,40%,9%,4%,4%,2%,,3%,,1%,1%,2018
+Ipsos MORI,22–27 Jun,GB,1026,41%,38%,7%,4%,1%,4%,,4%,,1%,3%,2018
+YouGov/The Times,25–26 Jun,GB,1645,42%,37%,9%,5%,5%,3%,,3%,,1%,5%,2018
+ICM/The Guardian,22–24 Jun,GB,2013,41%,40%,9%,3%,1%,3%,,3%,,1%,1%,2018
+Survation/Good Morning Britain,19–20 Jun,UK,1022,41%,38%,7%,4%,1%,3%,,3%,,3%,3%,2018
+YouGov/The Times,18–19 Jun,GB,1606,42%,40%,9%,4%,4%,2%,,3%,,0%,2%,2018
+,14 Jun,Lewisham East by-election[10],Lewisham East by-election[10],Lewisham East by-election[10],Lewisham East by-election[10],Lewisham East by-election[10],Lewisham East by-election[10],Lewisham East by-election[10],Lewisham East by-election[10],,Lewisham East by-election[10],,Lewisham East by-election[10],Lewisham East by-election[10],2018
+YouGov/The Times,11–12 Jun,GB,1638,42%,39%,8%,4%,4%,2%,,3%,,1%,3%,2018
+ICM/The Guardian,8–10 Jun,GB,2021,42%,40%,8%,3%,0%,3%,,3%,,0%,2%,2018
+BMG/The Independent,5–8 Jun,GB,1490,38%,41%,11%,2%,0%,2%,,4%,,1%,3%,2018
+Opinium/The Observer,5–7 Jun,GB,2005,42%,40%,7%,6%,1%,2%,,3%,,1%,2%,2018
+YouGov/The Times,4–5 Jun,GB,1619,44%,37%,8%,4%,4%,3%,,3%,,0%,7%,2018
+Survation,31 May–4 Jun,UK,2012,41%,40%,9%,3%,1%,2%,,2%,,3%,1%,2018
+Deltapoll/The Sun on Sunday,30 May–1 Jun,GB,1013,41%,41%,6%,4%,0%,2%,,5%,,1%,Tie,2018
+YouGov/The Times,28–29 May,GB,1670,42%,39%,9%,5%,5%,2%,,3%,,1%,3%,2018
+ICM/The Guardian,25–29 May,GB,2002,43%,40%,8%,3%,1%,2%,,3%,,1%,3%,2018
+Ipsos MORI,18–22 May,GB,1015,40%,40%,7%,5%,0%,5%,,2%,,0%,Tie,2018
+YouGov/The Times,20–21 May,GB,1660,42%,38%,9%,4%,4%,3%,,2%,,1%,4%,2018
+"ComRes/We, The People",16–17 May,GB,2045,41%,41%,7%,3%,1%,3%,,3%,,1%,Tie,2018
+Opinium/The Observer,15–16 May,GB,2009,43%,39%,6%,4%,1%,3%,,4%,,1%,4%,2018
+YouGov/The Times,13–14 May,GB,1634,43%,38%,9%,3%,3%,3%,,3%,,1%,5%,2018
+ICM/The Guardian,11–13 May,GB,2050,43%,40%,8%,3%,0%,3%,,3%,,1%,3%,2018
+Survation,8–10 May,UK,1585,41%,40%,8%,3%,1%,2%,,3%,,2%,1%,2018
+YouGov/The Times,8–9 May,GB,1648,43%,38%,9%,4%,4%,2%,,2%,,1%,5%,2018
+BMG/The Independent,1–4 May,GB,1441,39%,39%,10%,4%,1%,3%,,4%,,1%,Tie,2018
+,3 May,English local and mayoral elections and West Tyrone by-election[20][10],English local and mayoral elections and West Tyrone by-election[20][10],English local and mayoral elections and West Tyrone by-election[20][10],English local and mayoral elections and West Tyrone by-election[20][10],English local and mayoral elections and West Tyrone by-election[20][10],English local and mayoral elections and West Tyrone by-election[20][10],English local and mayoral elections and West Tyrone by-election[20][10],English local and mayoral elections and West Tyrone by-election[20][10],,English local and mayoral elections and West Tyrone by-election[20][10],,English local and mayoral elections and West Tyrone by-election[20][10],English local and mayoral elections and West Tyrone by-election[20][10],2018
+YouGov/The Times,30 Apr–1 May,GB,1585,42%,38%,7%,4%,4%,3%,,3%,,1%,4%,2018
+ComRes/Daily Express,27–29 Apr,GB,2030,40%,40%,9%,3%,0%,3%,,5%,,1%,Tie,2018
+ICM/The Guardian,27–29 Apr,GB,2026,42%,39%,8%,3%,0%,3%,,4%,,1%,3%,2018
+YouGov/The Times,24–25 Apr,GB,1668,43%,38%,8%,4%,4%,3%,,3%,,0%,5%,2018
+Ipsos MORI,20–24 Apr,GB,1004,41%,40%,10%,3%,1%,2%,,2%,,1%,1%,2018
+YouGov/The Times,16–17 Apr,GB,1631,43%,38%,8%,4%,4%,3%,,3%,,1%,5%,2018
+Survation/The Mail on Sunday,14 Apr,UK,2060,40%,40%,9%,3%,1%,1%,,3%,,3%,Tie,2018
+,14 Apr,Gerard Batten officially becomes leader of the UK Independence Party[21],Gerard Batten officially becomes leader of the UK Independence Party[21],Gerard Batten officially becomes leader of the UK Independence Party[21],Gerard Batten officially becomes leader of the UK Independence Party[21],Gerard Batten officially becomes leader of the UK Independence Party[21],Gerard Batten officially becomes leader of the UK Independence Party[21],Gerard Batten officially becomes leader of the UK Independence Party[21],Gerard Batten officially becomes leader of the UK Independence Party[21],,Gerard Batten officially becomes leader of the UK Independence Party[21],,Gerard Batten officially becomes leader of the UK Independence Party[21],Gerard Batten officially becomes leader of the UK Independence Party[21],2018
+BMG,11–13 Apr,GB,1500,39%,38%,11%,4%,0%,4%,,3%,,1%,1%,2018
+ComRes/Sunday Express,11–12 Apr,GB,2038,40%,41%,7%,3%,1%,2%,,4%,,1%,1%,2018
+Opinium/The Observer,10–12 Apr,GB,2008,40%,40%,7%,4%,1%,2%,,5%,,1%,Tie,2018
+YouGov/The Times,9–10 Apr,GB,1639,40%,40%,9%,4%,4%,2%,,4%,,1%,Tie,2018
+ICM/The Guardian,6–8 Apr,GB,2012,42%,41%,7%,3%,0%,3%,,4%,,0%,1%,2018
+YouGov/The Times,4–5 Apr,GB,1662,42%,41%,7%,4%,4%,2%,,4%,,1%,1%,2018
+Number Cruncher Politics,27 Mar–5 Apr,UK,1037,43%,38%,8%,4%,1%,3%,,3%,,0%,5%,2018
+YouGov/The Times,26–27 Mar,GB,1659,43%,39%,8%,3%,3%,2%,,3%,,1%,4%,2018
+ICM/The Guardian,16–18 Mar,GB,2013,44%,41%,8%,3%,1%,2%,,1%,,1%,3%,2018
+BMG,13–16 Mar,GB,2065,38%,40%,10%,4%,0%,3%,,4%,,1%,2%,2018
+YouGov/The Times,14–15 Mar,GB,1986,42%,39%,7%,5%,5%,3%,,3%,,1%,3%,2018
+Opinium/The Observer,13–15 Mar,GB,2001,42%,40%,6%,4%,1%,3%,,4%,,0%,2%,2018
+Survation/GMB,7–8 Mar,UK,1038,37%,44%,9%,3%,0%,2%,,3%,,3%,7%,2018
+Ipsos MORI,2–7 Mar,GB,1012,43%,42%,6%,4%,1%,2%,,2%,,0%,1%,2018
+YouGov/The Times,5–6 Mar,GB,1641,41%,43%,7%,4%,4%,2%,,2%,,1%,2%,2018
+ICM/The Guardian,2–4 Mar,GB,2030,43%,42%,7%,3%,0%,3%,,2%,,0%,1%,2018
+YouGov/The Times,26–27 Feb,GB,1622,41%,42%,7%,4%,4%,2%,,3%,,1%,1%,2018
+YouGov/The Times,19–20 Feb,GB,1650,40%,42%,8%,4%,4%,2%,,4%,,0%,2%,2018
+ICM/The Guardian,16–19 Feb,GB,2027,42%,43%,7%,3%,0%,2%,,3%,,0%,1%,2018
+YouGov/The Times,12–13 Feb,GB,1639,40%,41%,8%,3%,3%,2%,,4%,,1%,1%,2018
+Kantar,6–12 Feb,GB,2448,39%,39%,8%,4%,1%,2%,,4%,,2%,Tie,2018
+BMG,6–9 Feb,GB,1507,40%,40%,8%,2%,0%,4%,,5%,,1%,Tie,2018
+Opinium/The Observer Archived 26 June 2019 at the Wayback Machine,6–8 Feb,GB,2002,42%,39%,7%,4%,1%,2%,,5%,,1%,3%,2018
+YouGov/The Times,5–6 Feb,GB,2000,43%,39%,8%,3%,3%,3%,,3%,,1%,4%,2018
+ICM/The Guardian,2–4 Feb,GB,2021,41%,40%,8%,3%,0%,3%,,4%,,1%,1%,2018
+YouGov/The Times,28–29 Jan,GB,1669,42%,42%,6%,4%,4%,3%,,2%,,1%,Tie,2018
+Survation,26–29 Jan,UK,1059,40%,43%,8%,2%,0%,1%,,3%,,3%,3%,2018
+Ipsos MORI,19–23 Jan,GB,1031,39%,42%,9%,4%,0%,2%,,3%,,1%,3%,2018
+ICM/The Guardian,10–19 Jan,GB,5075,41%,41%,7%,3%,0%,3%,,4%,,0%,Tie,2018
+YouGov/The Times,16–17 Jan,GB,1672,41%,42%,7%,4%,4%,2%,,3%,,0%,1%,2018
+ICM/The Guardian,12–14 Jan,GB,2027,40%,41%,7%,3%,1%,3%,,4%,,0%,1%,2018
+Opinium/The Observer Archived 26 June 2019 at the Wayback Machine,11–12 Jan,GB,2008,40%,40%,6%,4%,0%,3%,,5%,,1%,Tie,2018
+BMG,9–12 Jan,GB,1513,40%,41%,8%,3%,1%,2%,,4%,,1%,1%,2018
+YouGov/The Times,7–8 Jan,GB,1663,40%,41%,9%,4%,4%,2%,,3%,,0%,1%,2018
+YouGov/The Times,19–20 Dec,GB,1610,40%,42%,7%,5%,5%,1%,,4%,,0%,2%,2017
+ICM/The Sun on Sunday,12–14 Dec,GB,2004,41%,42%,7%,3%,0%,3%,,4%,,0%,1%,2017
+Opinium/The Observer Archived 9 July 2019 at the Wayback Machine,12–14 Dec,GB,2005,39%,41%,7%,4%,1%,2%,,6%,,1%,2%,2017
+YouGov/The Times,10–11 Dec,GB,1680,42%,41%,7%,4%,4%,2%,,4%,,2%[d],1%,2017
+ICM/The Guardian,8–10 Dec,GB,2006,42%,40%,8%,3%,1%,2%,,5%,,0%,2%,2017
+BMG/The Independent,5–8 Dec,GB,1509,37%,40%,9%,3%,1%,3%,,5%,,1%,3%,2017
+YouGov/The Times,4–5 Dec,GB,1638,40%,41%,7%,4%,4%,2%,,3%,,2%[d],1%,2017
+Survation/The Mail on Sunday,30 Nov–1 Dec,UK,1003,37%,45%,6%,3%,0%,1%,,4%,,3%,8%,2017
+ICM/The Sun on Sunday,29 Nov–1 Dec,GB,2050,40%,41%,8%,3%,0%,3%,,4%,,0%,1%,2017
+Ipsos MORI,24–28 Nov,GB,1003,37%,39%,9%,4%,1%,4%,,4%,,1%,2%,2017
+ICM/The Guardian,24–26 Nov,GB,2029,41%,41%,7%,3%,0%,3%,,5%,,0%,Tie,2017
+YouGov/The Times,22–23 Nov,GB,1644,39%,41%,7%,4%,4%,3%,,4%,,1%,2%,2017
+YouGov/The Times,19–20 Nov,GB,1677,40%,43%,7%,4%,4%,2%,,3%,,0%,3%,2017
+Kantar,14–20 Nov,GB,2437,42%,38%,9%,2%,0%,3%,,5%,,1%,4%,2017
+BMG,14–17 Nov,GB,1507,40%,41%,8%,–,–,–,,4%,,7%,1%,2017
+Opinium/The Observer,14–16 Nov,GB,2032,40%,42%,6%,4%,1%,2%,,5%,,0%,2%,2017
+ICM/The Guardian,10–12 Nov,GB,2010,41%,41%,7%,4%,0%,2%,,4%,,0%,Tie,2017
+YouGov/The Times,7–8 Nov,GB,2012,40%,43%,6%,4%,4%,2%,,4%,,1%,3%,2017
+Ipsos MORI,27 Oct–1 Nov,GB,1052,38%,40%,9%,4%,1%,3%,,4%,,1%,2%,2017
+YouGov/The Times,23–24 Oct,GB,1637,41%,43%,7%,4%,4%,2%,,3%,,0%,2%,2017
+ICM/The Guardian,20–23 Oct,GB,2022,42%,42%,7%,3%,0%,2%,,3%,,0%,Tie,2017
+BMG,17–20 Oct,GB,1506,37%,42%,10%,–,–,–,,4%,,7%,5%,2017
+YouGov/The Times,18–19 Oct,GB,1648,40%,42%,8%,4%,4%,2%,,4%,,1%,2%,2017
+YouGov/The Times,10–11 Oct,GB,1680,39%,42%,8%,4%,4%,2%,,4%,,0%,3%,2017
+ICM/The Guardian,6–8 Oct,GB,2052,41%,41%,7%,4%,1%,2%,,4%,,0%,Tie,2017
+Opinium/The Observer,4–6 Oct,GB,2009,40%,42%,5%,4%,0%,2%,,5%,,1%,2%,2017
+Survation,4–5 Oct,UK,2047,38%,44%,7%,3%,1%,1%,,4%,,2%,6%,2017
+YouGov/The Times,4–5 Oct,GB,1615,40%,42%,7%,4%,4%,2%,,4%,,1%,2%,2017
+,29 Sep,Henry Bolton officially becomes leader of the UK Independence Party[22],Henry Bolton officially becomes leader of the UK Independence Party[22],Henry Bolton officially becomes leader of the UK Independence Party[22],Henry Bolton officially becomes leader of the UK Independence Party[22],Henry Bolton officially becomes leader of the UK Independence Party[22],Henry Bolton officially becomes leader of the UK Independence Party[22],Henry Bolton officially becomes leader of the UK Independence Party[22],Henry Bolton officially becomes leader of the UK Independence Party[22],,Henry Bolton officially becomes leader of the UK Independence Party[22],,Henry Bolton officially becomes leader of the UK Independence Party[22],Henry Bolton officially becomes leader of the UK Independence Party[22],2017
+BMG/The Independent,26–29 Sep,GB,1910,37%,42%,10%,3%,0%,3%,,4%,,1%,5%,2017
+ICM/The Guardian,22–24 Sep,GB,1968,40%,42%,8%,3%,1%,2%,,4%,,1%,2%,2017
+YouGov/The Times,22–24 Sep,GB,1716,39%,43%,7%,4%,4%,2%,,4%,,0%,4%,2017
+Survation/The Mail on Sunday,22 Sep,UK,1174,38%,42%,8%,4%,1%,2%,,4%,,2%,4%,2017
+Opinium/The Observer,19–22 Sep,GB,2004,42%,40%,6%,4%,1%,2%,,4%,,1%,2%,2017
+Survation/LabourList,15–20 Sep,UK,1614,40%,41%,7%,3%,1%,2%,,5%,,1%,1%,2017
+Ipsos MORI,15–18 Sep,GB,1023,40%,44%,9%,4%,0%,1%,,2%,,0%,4%,2017
+BMG/The Independent,12–15 Sep,GB,1447,39%,38%,8%,3%,0%,4%,,6%,,1%,1%,2017
+Opinium/The Observer,12–15 Sep,GB,2009,41%,41%,5%,4%,1%,3%,,5%,,0%,Tie,2017
+YouGov/The Times,12–13 Sep,GB,1660,41%,42%,7%,4%,4%,2%,,3%,,1%,1%,2017
+ICM/The Guardian,8–10 Sep,GB,2052,42%,42%,7%,3%,0%,3%,,4%,,0%,Tie,2017
+Survation/The Mail on Sunday,31 Aug–1 Sep,UK,1046,38%,43%,7%,3%,1%,–,,4%,,3%,5%,2017
+YouGov/The Times,30–31 Aug,GB,1658,41%,42%,6%,4%,4%,2%,,4%,,0%,1%,2017
+ICM/The Guardian,25–28 Aug,GB,1972,42%,42%,7%,2%,0%,3%,,3%,,0%,Tie,2017
+YouGov/The Times,21–22 Aug,GB,1664,41%,42%,8%,4%,4%,1%,,4%,,0%,1%,2017
+Opinium/The Observer,15–18 Aug,GB,2006,40%,43%,6%,4%,1%,2%,,4%,,1%,3%,2017
+BMG/The Independent,7–11 Aug,GB,1512,42%,39%,7%,2%,0%,3%,,6%,,0%,3%,2017
+YouGov/The Times,31 Jul–1 Aug,GB,1665,41%,44%,7%,3%,3%,2%,,3%,,0%,3%,2017
+,20 Jul,Vince Cable officially becomes leader of the Liberal Democrats[23],Vince Cable officially becomes leader of the Liberal Democrats[23],Vince Cable officially becomes leader of the Liberal Democrats[23],Vince Cable officially becomes leader of the Liberal Democrats[23],Vince Cable officially becomes leader of the Liberal Democrats[23],Vince Cable officially becomes leader of the Liberal Democrats[23],Vince Cable officially becomes leader of the Liberal Democrats[23],Vince Cable officially becomes leader of the Liberal Democrats[23],,Vince Cable officially becomes leader of the Liberal Democrats[23],,Vince Cable officially becomes leader of the Liberal Democrats[23],Vince Cable officially becomes leader of the Liberal Democrats[23],2017
+YouGov/The Times,18–19 Jul,GB,1593,41%,43%,6%,4%,4%,2%,,3%,,0%,2%,2017
+Ipsos MORI,14–18 Jul,GB,1071,41%,42%,9%,3%,0%,2%,,3%,,1%,1%,2017
+ICM/The Guardian,14–16 Jul,GB,2046,42%,43%,7%,3%,1%,2%,,3%,,0%,1%,2017
+Survation/The Mail on Sunday,14–15 Jul,UK,1024,39%,41%,8%,3%,1%,1%,,6%,,1%,2%,2017
+BMG,11–14 Jul,GB,1518,37%,42%,10%,–,–,–,,4%,,7%,5%,2017
+Opinium/The Observer,11–14 Jul,GB,2013,41%,43%,5%,3%,0%,2%,,5%,,0%,2%,2017
+YouGov/The Times,10–11 Jul,GB,1700,40%,45%,7%,4%,4%,1%,,2%,,0%,5%,2017
+YouGov/The Times,5–6 Jul,GB,1648,38%,46%,6%,4%,4%,1%,,4%,,1%,8%,2017
+ICM/The Guardian,30 Jun–3 Jul,GB,2044,41%,43%,7%,3%,0%,3%,,3%,,0%,2%,2017
+Survation,28–30 Jun,UK,1017,41%,40%,7%,2%,0%,2%,,2%,,6%[f],1%,2017
+Opinium/The Observer,27–29 Jun,GB,2010,39%,45%,5%,3%,1%,2%,,5%,,0%,6%,2017
+Panelbase/The Sunday Times,16–21 Jun,GB,5481,41%,46%,6%,3%,<1%,1%,,2%,,<1%,5%,2017
+Survation/Good Morning Britain,16–17 Jun,UK,1005,41%,44%,6%,3%,1%,1%,,2%,,3%[g],3%,2017
+Survation/The Mail on Sunday,10 Jun,UK,1036,39%,45%,7%,3%,1%,–,,3%,,2%,6%,2017
+2017 general election,8 Jun,GB,–,43.4%,41.0%,7.6%,3.1%,0.5%,1.7%,,1.9%,,0.8%,2.4%,2017
+2017 general election,8 Jun,UK,–,42.3%,40.0%,7.4%,3.0%,0.5%,1.6%,,1.8%,,3.3%,2.3%,2017
