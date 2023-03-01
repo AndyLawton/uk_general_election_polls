@@ -24,7 +24,14 @@
 
     .center {
         width: 80%;
+    }
+
+    .latest {
         margin: auto;
+    }
+
+    .chart {
+        margin: none;
     }
 
     .footer {
@@ -106,11 +113,11 @@
 
 
 
-<div class="row center" style="text-align: center;">
+<div class="row center chart" style="text-align: center;">
     <img src="monthly_trend.png"/>
 </div>
 
-<div class="row center">
+<div class="row center latest">
 
     <h2> Last 25 Polls </h2>
     <?php require("top_25.html") ?>
