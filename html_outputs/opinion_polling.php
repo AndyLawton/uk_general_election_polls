@@ -27,6 +27,21 @@
         margin: auto;
     }
 
+    .footer {
+        text-align: center;
+        color: #444444;
+    }
+
+    .donation {
+        text-align: center;
+        color: #111111;
+    }
+
+    .footer a, a:hover, a:visited, a:active {
+      color: inherit;
+      text-decoration: none;
+     }
+
     /* Clear floats after the columns */
     .row:after {
         content: "";
@@ -101,6 +116,17 @@
     <?php require("top_25.html") ?>
 </div>
 
-<br><br><br>
+<br>
+<br>
+<div class="row center donation">
+    <a href='https://ko-fi.com/andlawton'> Buy me a coffee to keep this site running at Ko-Fi </a>
+</div>
+<br>
+<div class="row center footer">
+    &#169; <a href='https://andylawton.com'> Andy Lawton </a>
+</div>
+<br>
+
+
 </body>
 </html>
