@@ -76,6 +76,7 @@ def main():
                 'JL Partners Polls': 34*.75,
                 'PeoplePolling': 34*.75,
                 'Omnisis': 34*.75,
+                'More in Common': 34*.75,
                 }
 
     top_two = {'Ipsos MORI': 100,
@@ -96,6 +97,7 @@ def main():
                'JL Partners Polls': 34*.75,
                'PeoplePolling': 34*.75,
                'Omnisis': 34*.75,
+               'More in Common': 34*.75,
                }
 
     recency_weights = {
