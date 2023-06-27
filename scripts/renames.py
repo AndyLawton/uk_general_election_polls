@@ -63,4 +63,5 @@ pollster_cleanup = {
     'J&L Partners': 'JL Partners Polls',
     'Redfield & Wilton': 'Redfield & Wilton Strategies',
     'People Polling': 'PeoplePolling',
+    'More In Common': 'More in Common',
 }
