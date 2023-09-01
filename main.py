@@ -75,7 +75,7 @@ def main():
                 'Techne UK': 34*.75,
                 'JL Partners Polls': 34*.75,
                 'PeoplePolling': 34*.75,
-                'Omnisis': 34*.75,
+                'We Think': 34*.75,
                 'More in Common': 34*.75,
                 }
 
@@ -96,7 +96,7 @@ def main():
                'Techne UK': 34*.75,
                'JL Partners Polls': 34*.75,
                'PeoplePolling': 34*.75,
-               'Omnisis': 34*.75,
+               'We Think': 34*.75,
                'More in Common': 34*.75,
                }
 

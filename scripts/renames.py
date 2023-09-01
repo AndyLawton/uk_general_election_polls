@@ -64,4 +64,5 @@ pollster_cleanup = {
     'Redfield & Wilton': 'Redfield & Wilton Strategies',
     'People Polling': 'PeoplePolling',
     'More In Common': 'More in Common',
+    'Omnisis': 'We Think',
 }
