@@ -61,7 +61,7 @@ def main():
     top_five = {'Ipsos MORI': 100,
                 'Opinium': 79,
                 'YouGov': 77,
-                'Kantar Public': 69,
+                'Verian': 69,
                 'Number Cruncher Politics': 61,
                 'Survation': 59,
                 'Panelbase': 57,
@@ -74,14 +74,16 @@ def main():
                 'Redfield & Wilton Strategies': 34*.75,
                 'Techne UK': 34*.75,
                 'JL Partners Polls': 34*.75,
-                'PeoplePolling': 34*0.1, # Huge outlier without caring for fundamental polling principles
+                'PeoplePolling': 34*0.1,  # Huge outlier without caring for fundamental polling principles
                 'We Think': 34*.75,
                 'More in Common': 34*.75,
+                'Whitestone Insight': 34*.75,
+                'Lord Ashcroft Polls': 34,
                 }
 
     top_two = {'Ipsos MORI': 100,
                'Survation': 85,
-               'Kantar Public': 85,
+               'Verian': 85,
                'Panelbase': 74,
                'Number Cruncher Politics': 71,
                'Opinium': 71,
@@ -98,6 +100,8 @@ def main():
                'PeoplePolling': 34*0.1,  # Huge outlier without caring for fundamental polling principles
                'We Think': 34*.75,
                'More in Common': 34*.75,
+               'Whitestone Insight': 34*.75,
+               'Lord Ashcroft Polls': 34,
                }
 
     recency_weights = {
