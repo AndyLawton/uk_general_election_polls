@@ -75,7 +75,7 @@ final_table_info = [
 ]
 final_column_names = final_table_info + party_columns + final_columns
 
-replacement_values = {'?': nan, '–': nan, '-': nan, '*': nan, 'TBA': nan, 'Tie': 0, 'TBC': nan}
+replacement_values = {'?': nan, '–': nan, '—': nan, '-': nan, '*': nan, 'TBA': nan, 'Tie': 0, 'TBC': nan}
 
 party_colors = {
     'conservative': '#0087DC',
