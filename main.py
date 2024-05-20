@@ -241,6 +241,8 @@ def main():
             "conservative": lambda x: f"{x:.{precision}f}%",
             "labour": lambda x: f"{x:.{precision}f}%",
             "liberal_democrat": lambda x: f"{x:.{precision}f}%",
+            # "green": lambda x: f"{x:.{precision}f}%",
+            # "reform_uk": lambda x: f"{x:.{precision}f}%",
             "lead_value": lambda x: f"{x:.{precision}f}%",
             reporting_date: lambda x: f"{x:%d-%b}",
             'poll_month': lambda x: f"{x:%b-%y}",
@@ -288,7 +290,7 @@ def main():
                       )
         return df_as_html
 
-    display_columns = [reporting_date, 'pollster', 'conservative', 'labour', 'liberal_democrat', 'lead_value']
+    display_columns = [reporting_date, 'pollster', 'conservative', 'labour', 'liberal_democrat',, 'lead_value']
     top_25_html = polls_to_html(all_polls[display_columns][0:25], title='Last 25 Polls')
 
     display_columns = ['pollster', reporting_date, 'poll_weight', 'conservative', 'labour', 'liberal_democrat',

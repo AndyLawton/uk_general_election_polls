@@ -47,13 +47,13 @@ major_parties = [
     'liberal_democrat',
 ]
 minor_parties = [
+    'green',
+    'reform_uk',
     'alliance',
     'brexit_party',
     'change_uk',
-    'green',
     'liberal',
     'plaid_cymru',
-    'reform_uk',
     'scottish_national_party',
     'social_democratic_party',
     'united_kingdom_independence_party',

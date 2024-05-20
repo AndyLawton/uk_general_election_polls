@@ -66,4 +66,5 @@ pollster_cleanup = {
     'People Polling': 'PeoplePolling',
     'More In Common': 'More in Common',
     'Omnisis': 'We Think',
+    'Whitestone insight': 'Whitestone Insight',
 }
