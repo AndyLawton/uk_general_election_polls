@@ -290,7 +290,7 @@ def main():
                       )
         return df_as_html
 
-    display_columns = [reporting_date, 'pollster', 'conservative', 'labour', 'liberal_democrat',, 'lead_value']
+    display_columns = [reporting_date, 'pollster', 'conservative', 'labour', 'liberal_democrat', 'lead_value']
     top_25_html = polls_to_html(all_polls[display_columns][0:25], title='Last 25 Polls')
 
     display_columns = ['pollster', reporting_date, 'poll_weight', 'conservative', 'labour', 'liberal_democrat',
