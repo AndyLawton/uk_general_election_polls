@@ -305,7 +305,9 @@ def main():
     df = monthly_summary.reset_index()[display_columns].iloc[:0:-1]
     monthly_averages = polls_to_html(df, title='Monthly Poll Average', highlight_party_columns=True, precision=1)
 
-    polling_average = polls_to_html(current_average[['labour', 'conservative',  'reform_uk', 'liberal_democrat', 'green', 'lead_value']],
+    #columns_to_use = ['labour', 'conservative',  'reform_uk', 'liberal_democrat', 'green', 'lead_value']
+    columns_to_use = list(current_average.drop(columns=['lead', 'lead_value']).iloc[0].sort_values(ascending=False).index) + ['lead_value']
+    polling_average = polls_to_html(current_average[columns_to_use],
                                     title='Polling Average', highlight_party_columns=False, precision=1)
 
     with open(f'{web_files_location}/top_25.html', 'w') as f:
@@ -413,7 +415,7 @@ def main():
         start_value = averages_per_day.iloc[0][party]
         change = end_value - start_value
 
-        annotation_text = f'{end_value:.1f}% ({change:.1f})'
+        annotation_text = f'{end_value:.1f}% ({change:+.1f})'
         annotation_x = last_date + timedelta(hours=12)
         annotation_y = end_value - 1
         ax.annotate(annotation_text, (annotation_x, annotation_y), textcoords="offset points", xytext=(0, 10),
