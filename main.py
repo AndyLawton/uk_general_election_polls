@@ -434,7 +434,7 @@ def main():
     plt.title(plot_title)
     # source = 'Source: Wikipedia - Opinion polling for the next United Kingdom general election'
     # plt.annotate(source, (1, 0), (0, -20), xycoords='axes fraction', textcoords='offset points', va='top', ha='right')
-    fig.savefig('html_outputs/campaign_polling.png', bbox_inches='tight', pad_inches=0.2)
+    fig.savefig(f'{web_files_location}/campaign_polling.png', bbox_inches='tight', pad_inches=0.2)
 
 
 if __name__ == "__main__":
