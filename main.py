@@ -413,8 +413,11 @@ def main():
         start_value = averages_per_day.iloc[0][party]
         change = end_value - start_value
 
-        ax.annotate(f'{change:.1f}%', (last_date + timedelta(days=1), end_value - 1), textcoords="offset points",
-                    xytext=(0, 10), ha='center', fontsize=10, va='top', color=party_colors[party], fontweight='bold')
+        annotation_text = f'{end_value:.1f}% ({change:.1f})'
+        annotation_x = last_date + timedelta(hours=12)
+        annotation_y = end_value - 1
+        ax.annotate(annotation_text, (annotation_x, annotation_y), textcoords="offset points", xytext=(0, 10),
+                    ha='left', fontsize=10, va='top', color=party_colors[party], fontweight='bold')
 
 
     ax.set_yticks(arange(0, 51, 10), minor=False)
