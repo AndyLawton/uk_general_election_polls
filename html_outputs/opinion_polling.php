@@ -22,6 +22,34 @@
         text-align: center;
     }
 
+    .column10 {
+        float: left;
+        width:10%;
+        padding: 25px;
+        text-align: center;
+    }
+
+    .column30 {
+        float: left;
+        width:30%;
+        padding: 25px;
+        text-align: center;
+    }
+
+    .column70 {
+        float: left;
+        width:70%;
+        padding: 25px;
+        text-align: center;
+    }
+
+    .column100 {
+        float: left;
+        width:100%;
+        padding: 25px;
+        text-align: center;
+    }
+
     .center {
         width: 80%;
     }
@@ -84,17 +112,22 @@
 <body>
 
 <div class="row">
-    <div class="column">
+    <div class="column30">
         <h1> Polling Average </h1>
     </div>
 
 
-    <div class="column">
+    <div class="column70">
         <br>
         <?php require("polling_average.html") ?>
     </div>
 
 </div>
+
+<div class="row center chart" style="text-align: center;">
+    <img src="campaign_polling.png"/>
+</div>
+
 
 <div class="row">
     <div class="column">

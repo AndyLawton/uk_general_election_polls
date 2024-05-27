@@ -150,7 +150,7 @@ def main():
     lead_party = ''
     max_vote_share = 0
     second_vote_share = 0
-    for party in major_parties:
+    for party in major_parties + ['reform_uk', 'green']:
         party_vote_share = pollsters_latest[party].dot(pollsters_latest['poll_weight'])/pollsters_latest[
             'poll_weight'].sum()
         if party_vote_share > max_vote_share:
@@ -241,8 +241,8 @@ def main():
             "conservative": lambda x: f"{x:.{precision}f}%",
             "labour": lambda x: f"{x:.{precision}f}%",
             "liberal_democrat": lambda x: f"{x:.{precision}f}%",
-            # "green": lambda x: f"{x:.{precision}f}%",
-            # "reform_uk": lambda x: f"{x:.{precision}f}%",
+            "green": lambda x: f"{x:.{precision}f}%",
+            "reform_uk": lambda x: f"{x:.{precision}f}%",
             "lead_value": lambda x: f"{x:.{precision}f}%",
             reporting_date: lambda x: f"{x:%d-%b}",
             'poll_month': lambda x: f"{x:%b-%y}",
@@ -282,6 +282,8 @@ def main():
                       .replace('>conservative', '>Conservatives')
                       .replace('>labour', '>Labour')
                       .replace('>liberal_democrat', '>Lib Dem')
+                      .replace('>green', '>Green')
+                      .replace('>reform_uk', '>Reform')
                       .replace('>lead_value', '>Lead')
                       .replace(f'>{reporting_date}', '>Date')
                       .replace('>poll_month', '>Month')
@@ -303,7 +305,7 @@ def main():
     df = monthly_summary.reset_index()[display_columns].iloc[:0:-1]
     monthly_averages = polls_to_html(df, title='Monthly Poll Average', highlight_party_columns=True, precision=1)
 
-    polling_average = polls_to_html(current_average[['conservative', 'labour', 'liberal_democrat', 'lead_value']],
+    polling_average = polls_to_html(current_average[['labour', 'conservative',  'reform_uk', 'liberal_democrat', 'green', 'lead_value']],
                                     title='Polling Average', highlight_party_columns=False, precision=1)
 
     with open(f'{web_files_location}/top_25.html', 'w') as f:
@@ -354,6 +356,85 @@ def main():
     source = 'Source: Wikipedia - Opinion polling for the next United Kingdom general election'
     plt.annotate(source, (1, 0), (0, -20), xycoords='axes fraction', textcoords='offset points', va='top', ha='right')
     fig.savefig(f'{web_files_location}/monthly_trend.png', bbox_inches='tight', pad_inches=0.2)
+
+    from datetime import datetime, date, timedelta
+    campaign_start = datetime(2024, 5, 22)
+    election_date = datetime(2024, 7, 4)
+    analysis_date = campaign_start
+
+    pollster_list = list(one_year_polls.pollster.unique())
+
+    parties_to_include = ['labour', 'conservative', 'reform_uk', 'liberal_democrat', 'green', ]
+    averages_per_day = pd.DataFrame(columns=parties_to_include + ['lead'],
+                                    index=pd.date_range(start=campaign_start, end=election_date))
+    while analysis_date < datetime.now() - timedelta(days=1):
+
+        polls_at_date = one_year_polls.query(f'date_started < "{analysis_date}" ')
+
+        pollster_latest_polls_at_date = polls_at_date.groupby('pollster').nth(0).reset_index()
+
+        pollster_latest_polls_at_date['recency_weight'] = pollster_latest_polls_at_date[reporting_date].apply(
+            get_recency_weight, current_date=polls_at_date[reporting_date].max())
+        pollster_latest_polls_at_date['pollster_weight'] = pollster_latest_polls_at_date['pollster'].apply(
+            get_pollster_weight)
+        pollster_latest_polls_at_date['poll_weight'] = pollster_latest_polls_at_date['pollster_weight']*(
+                pollster_latest_polls_at_date['recency_weight']/100)
+
+        pollster_latest_polls_at_date = pollster_latest_polls_at_date[pollster_latest_polls_at_date['poll_weight'] > 0]
+
+        for party in parties_to_include:
+            averages_per_day.loc[analysis_date, party] = pollster_latest_polls_at_date[party].dot(
+                pollster_latest_polls_at_date['poll_weight'])/pollster_latest_polls_at_date['poll_weight'].sum()
+
+        analysis_date += timedelta(days=1)
+    # Lead is max minus 2nd max
+    averages_per_day['lead'] = averages_per_day.apply(lambda x: x.drop('lead').max(), axis=1) - averages_per_day.apply(
+        lambda x: x.map(float).drop('lead').nlargest(2).min(), axis=1)
+
+    from scripts.constants import party_colors, major_parties
+    import matplotlib.pyplot as plt
+    from numpy import arange
+
+    fig = plt.figure(figsize=(15, 5))
+    fig.set_facecolor('white')
+    ax = plt.gca()
+
+    last_date = averages_per_day[averages_per_day.labour > 0].index.max()
+
+    for party in parties_to_include:
+        plt.plot_date(
+            x=averages_per_day.index,
+            y=averages_per_day[party],
+            fmt='-',
+            color=party_colors[party],
+            linewidth=4)
+
+        end_value = averages_per_day.loc[last_date, party]
+        start_value = averages_per_day.iloc[0][party]
+        change = end_value - start_value
+
+        ax.annotate(f'{change:.1f}%', (last_date + timedelta(days=1), end_value - 1), textcoords="offset points",
+                    xytext=(0, 10), ha='center', fontsize=10, va='top', color=party_colors[party], fontweight='bold')
+
+
+    ax.set_yticks(arange(0, 51, 10), minor=False)
+    # major_locator = plt.matplotlib.dates.DayLocator(interval=7)
+    major_locator = plt.matplotlib.dates.WeekdayLocator(byweekday=plt.matplotlib.dates.TH, interval=1)
+    major_fmt = plt.matplotlib.dates.DateFormatter('%d/%m')
+
+    ax.xaxis.set_major_locator(major_locator)
+    ax.xaxis.set_major_formatter(major_fmt)
+
+    ax.yaxis.set_major_formatter(plt.matplotlib.ticker.FuncFormatter(lambda x, p: f'{x/100:.0%}'))
+
+    # set xlim
+    ax.set_xlim([campaign_start, election_date])
+
+    plot_title = 'Campaign Polling Average'
+    plt.title(plot_title)
+    # source = 'Source: Wikipedia - Opinion polling for the next United Kingdom general election'
+    # plt.annotate(source, (1, 0), (0, -20), xycoords='axes fraction', textcoords='offset points', va='top', ha='right')
+    fig.savefig('html_outputs/campaign_polling.png', bbox_inches='tight', pad_inches=0.2)
 
 
 if __name__ == "__main__":
