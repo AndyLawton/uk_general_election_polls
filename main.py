@@ -73,7 +73,7 @@ def main():
                 'Find Out Now': 34*0.3,  # Ludicrous Local Election Polling
                 'Redfield & Wilton Strategies': 34*.75,
                 'Techne UK': 34*.75,
-                'JL Partners Polls': 34*.75,
+                'JL Partners': 34*.75,
                 'PeoplePolling': 34*0.1,  # Huge outlier without caring for fundamental polling principles
                 'We Think': 34*.75,
                 'More in Common': 34*.75,
@@ -96,7 +96,7 @@ def main():
                'Find Out Now': 34*0.3,  # Ludicrous Local Election Polling
                'Redfield & Wilton Strategies': 34*.75,
                'Techne UK': 34*.75,
-               'JL Partners Polls': 34*.75,
+               'JL Partners': 34*.75,
                'PeoplePolling': 34*0.1,  # Huge outlier without caring for fundamental polling principles
                'We Think': 34*.75,
                'More in Common': 34*.75,
