@@ -297,7 +297,7 @@ def main():
 
     display_columns = ['pollster', reporting_date, 'poll_weight', 'conservative', 'labour', 'liberal_democrat',
                        'lead_value']
-    df = pollsters_latest.sort_values(by='poll_weight', ascending=False)[display_columns]
+    df = pollsters_latest.sort_values(by=['poll_weight', reporting_date], ascending=False)[display_columns]
     pollsters_recent = polls_to_html(df, title='Latest Polls', highlight_party_columns=False)
 
     display_columns = ['poll_month', 'pollster_count', 'poll_count', 'conservative', 'labour', 'liberal_democrat',
