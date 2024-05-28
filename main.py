@@ -393,6 +393,9 @@ def main():
     averages_per_day['lead'] = averages_per_day.apply(lambda x: x.drop('lead').max(), axis=1) - averages_per_day.apply(
         lambda x: x.map(float).drop('lead').nlargest(2).min(), axis=1)
 
+    campaign_polls = one_year_polls[one_year_polls[reporting_date] >= campaign_start].copy()
+    campaign_polls['pollster_weight'] = campaign_polls['pollster'].apply(get_pollster_weight)
+
     from scripts.constants import party_colors, major_parties
     import matplotlib.pyplot as plt
     from numpy import arange
@@ -420,6 +423,17 @@ def main():
         annotation_y = end_value - 1
         ax.annotate(annotation_text, (annotation_x, annotation_y), textcoords="offset points", xytext=(0, 10),
                     ha='left', fontsize=10, va='top', color=party_colors[party], fontweight='bold')
+
+        plt.scatter(
+            x=campaign_polls[reporting_date],
+            y=campaign_polls[party],
+            color=party_colors[party],
+            alpha=campaign_polls['pollster_weight']/100*0.6,
+            s=50,
+            marker='o',
+            edgecolors='white',
+            linewidths=0.5
+        )
 
 
     ax.set_yticks(arange(0, 51, 10), minor=False)
