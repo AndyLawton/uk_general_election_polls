@@ -32,7 +32,7 @@ wikipedia_links = {
     '2015': 'https://en.wikipedia.org/wiki/Opinion_polling_for_the_2015_United_Kingdom_general_election',
     '2017': 'https://en.wikipedia.org/wiki/Opinion_polling_for_the_2017_United_Kingdom_general_election',
     '2019': 'https://en.wikipedia.org/wiki/Opinion_polling_for_the_2019_United_Kingdom_general_election',
-    'next': 'https://en.wikipedia.org/wiki/Opinion_polling_for_the_next_United_Kingdom_general_election',
+    'next': 'https://en.wikipedia.org/wiki/Opinion_polling_for_the_2024_United_Kingdom_general_election',
 }
 
 poll_info_columns = [
