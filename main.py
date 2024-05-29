@@ -325,7 +325,8 @@ def main():
                           'props': [('text-align', 'center'), ('font-size', '20pt'), ('color', 'black'),
                                     ('padding-bottom', '15')]}
         all_cells = {'selector': '', 'props': [('margin', '0 auto'), ('width', '100%')]}
-        date_col = {'selector': '.col0', 'props': [('text-align', 'left')]}
+        if len(dataframe) > 3:
+            date_col = {'selector': '.col0', 'props': [('text-align', 'left')]}
 
         styles = [all_cells, date_col, caption_format]
 
