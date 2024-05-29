@@ -328,7 +328,9 @@ def main():
         if len(dataframe) > 3:
             date_col = {'selector': '.col0', 'props': [('text-align', 'left')]}
 
-        styles = [all_cells, date_col, caption_format]
+            styles = [all_cells, date_col, caption_format]
+        else:
+            styles = [all_cells, caption_format]
 
         if 'poll_weight' in dataframe.columns:
             styles.append({'selector': '.col2', 'props': [('color', '#AAA')]})
