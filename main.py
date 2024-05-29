@@ -104,6 +104,25 @@ def main():
                'Lord Ashcroft Polls': 34,
                }
 
+    pollster_dk_type = {
+        'BMG Research': 'squeeze',
+        'Deltapoll': 'rebase',
+        'Ipsos MORI': 'squeeze',
+        'Lord Ashcroft Polls': 'rebase',
+        'More in Common': 'squeeze',
+        'Opinium': 'reweight',
+        'PeoplePolling': 'rebase',
+        'Redfield & Wilton Strategies': 'rebase',
+        'Savanta': 'squeeze',
+        'Survation': 'rebase',
+        'Techne UK': 'rebase',
+        'We Think': 'rebase',
+        'Whitestone Insight': 'squeeze',
+        'YouGov': 'rebase',
+        'JL Partners': 'reweight',
+    }
+    sample_size_reduction_factor = 0.75  # This is due to exclusion of non voters and undecideds
+
     recency_weights = {
         -1: 100,
         5: 100,
@@ -150,20 +169,44 @@ def main():
     lead_party = ''
     max_vote_share = 0
     second_vote_share = 0
+    max_vote_share_max = 0
+    max_vote_share_min = 0
+    second_vote_share_max = 0
+    second_vote_share_min = 0
+
     for party in major_parties + ['reform_uk', 'green']:
         party_vote_share = pollsters_latest[party].dot(pollsters_latest['poll_weight'])/pollsters_latest[
             'poll_weight'].sum()
+        pollsters_latest[f'{party}_variance'] = pollsters_latest[party] - party_vote_share
+        pollsters_latest[f'{party}_variance'] = pollsters_latest[f'{party}_variance'] ** 2
+        pollsters_latest[f'{party}_variance'] = pollsters_latest[f'{party}_variance']* pollsters_latest['poll_weight']
+
+        party_moe = 1.96*(pollsters_latest[f'{party}_variance'].sum()/pollsters_latest['poll_weight'].sum()) ** 0.5
+        pollsters_latest.drop(columns=[f'{party}_variance'], inplace=True)
+
         if party_vote_share > max_vote_share:
             second_vote_share = max_vote_share
             max_vote_share = party_vote_share
+            second_vote_share_max = max_vote_share_max
+            second_vote_share_min = max_vote_share_min
+            max_vote_share_max = party_vote_share + party_moe
+            max_vote_share_min = max_vote_share - party_moe
+
             lead_party = party
         else:
             if party_vote_share > second_vote_share:
                 second_vote_share = party_vote_share
+                second_vote_share_max = party_vote_share + party_moe
+                second_vote_share_min = max_vote_share - party_moe
         current_average.loc['Polling Average', party] = party_vote_share
+        current_average.loc['Polling Range', party] = f'({max(0, party_vote_share - party_moe):.0f}-{min(100, party_vote_share + party_moe):.0f}%)'
         # current_average.loc['Polling Average', party] = f'{party_vote_share:.1f}%'
     # current_average.loc['Polling Average', 'lead'] = f'{lead_party:.3s}+{max_vote_share - second_vote_share:.1f}%'
     current_average.loc['Polling Average', 'lead_value'] = max_vote_share - second_vote_share
+    max_range = max_vote_share_max - second_vote_share_min
+    min_range = max_vote_share_min - second_vote_share_max
+
+    current_average.loc['Polling Range', 'lead_value'] = f'({max(0, min_range):.0f}-{min(100, max_range):.0f}%)'
 
     one_year_polls['poll_month'] = one_year_polls[reporting_date].apply(lambda x: x.replace(day=1))
 
@@ -194,6 +237,20 @@ def main():
     def add_background_colour_to_cells(df, lead_only=False):
         from scripts.constants import party_colors, major_parties
         background_df = df.copy()
+
+        if 'Polling Range' in background_df.index:
+            for column in background_df.columns:
+                background_df[column] = ''
+            background_df.loc['Polling Range', 'lead_value'] = ''
+
+            figs = df.loc['Polling Average', major_parties]
+            party_in_lead = list(figs[figs == figs.max()].index)[0]
+            color = party_colors[party_in_lead]
+            party_lead_value = df.loc['Polling Average', party_in_lead]
+
+            background_df.loc['Polling Average', 'lead_value'] =  f'background-color: {color}{result_to_opacity(party_lead_value, 0 , party_lead_value)}'
+            return background_df
+
         max_party_lead = background_df['lead_value'].max()
 
         for party in major_parties:
@@ -223,6 +280,8 @@ def main():
                 background_df[column] = ''
         return background_df
 
+    import numpy as np
+
     def polls_to_html(dataframe, title, highlight_party_columns=True, precision=0):
         dataframe.index.name = 'id'
         table_id = '_'.join(title.split(' ')).lower()
@@ -234,16 +293,18 @@ def main():
         styler.apply(add_background_colour_to_cells, axis=None,
                      lead_only=not (highlight_party_columns))
 
+        #return styler.render()
+
         styler.format({
             "pollster": lambda x: f"{x}",
             "pollster_count": lambda x: f"{x}",
             "poll_count": lambda x: f"{x}",
-            "conservative": lambda x: f"{x:.{precision}f}%",
-            "labour": lambda x: f"{x:.{precision}f}%",
-            "liberal_democrat": lambda x: f"{x:.{precision}f}%",
-            "green": lambda x: f"{x:.{precision}f}%",
-            "reform_uk": lambda x: f"{x:.{precision}f}%",
-            "lead_value": lambda x: f"{x:.{precision}f}%",
+            "conservative": lambda x: f"{x:.{precision}f}%" if type(x) == np.float64 or type(x) == float else x,
+            "labour": lambda x: f"{x:.{precision}f}%" if type(x) == np.float64 or type(x) == float else x,
+            "liberal_democrat": lambda x: f"{x:.{precision}f}%" if type(x) == np.float64 or type(x) == float else x,
+            "green": lambda x: f"{x:.{precision}f}%" if type(x) == np.float64 or type(x) == float else x,
+            "reform_uk": lambda x: f"{x:.{precision}f}%" if type(x) == np.float64 or type(x) == float else x,
+            "lead_value": lambda x: f"{x:.{precision}f}%" if type(x) == np.float64 or type(x) == float else x,
             reporting_date: lambda x: f"{x:%d-%b}",
             'poll_month': lambda x: f"{x:%b-%y}",
             'poll_weight': lambda x: f"{x:.0f}",
@@ -305,8 +366,12 @@ def main():
     df = monthly_summary.reset_index()[display_columns].iloc[:0:-1]
     monthly_averages = polls_to_html(df, title='Monthly Poll Average', highlight_party_columns=True, precision=1)
 
-    #columns_to_use = ['labour', 'conservative',  'reform_uk', 'liberal_democrat', 'green', 'lead_value']
-    columns_to_use = list(current_average.drop(columns=['lead', 'lead_value']).iloc[0].sort_values(ascending=False).index) + ['lead_value']
+
+    # columns_to_use = ['labour', 'conservative',  'reform_uk', 'liberal_democrat', 'green', 'lead_value']
+    columns_to_use = list(
+        current_average.drop(columns=['lead', 'lead_value']).iloc[0].sort_values(ascending=False).index) + [
+                         'lead_value']
+
     polling_average = polls_to_html(current_average[columns_to_use],
                                     title='Polling Average', highlight_party_columns=False, precision=1)
 
@@ -367,7 +432,12 @@ def main():
     pollster_list = list(one_year_polls.pollster.unique())
 
     parties_to_include = ['labour', 'conservative', 'reform_uk', 'liberal_democrat', 'green', ]
-    averages_per_day = pd.DataFrame(columns=parties_to_include + ['lead'],
+    average_columns = parties_to_include.copy()
+    average_columns += [f'{party}_low' for party in parties_to_include]
+    average_columns += [f'{party}_high' for party in parties_to_include]
+    average_columns += ['lead']
+
+    averages_per_day = pd.DataFrame(columns=average_columns,
                                     index=pd.date_range(start=campaign_start, end=election_date))
     while analysis_date < datetime.now() - timedelta(days=1):
 
@@ -384,14 +454,72 @@ def main():
 
         pollster_latest_polls_at_date = pollster_latest_polls_at_date[pollster_latest_polls_at_date['poll_weight'] > 0]
 
+        for ix, poll in pollster_latest_polls_at_date.iterrows():
+            effective_sample_size = int(poll['sample_size'])*sample_size_reduction_factor
+            for party in parties_to_include:
+                if f'{party}_low' not in pollster_latest_polls_at_date.columns:
+                    pollster_latest_polls_at_date[f'{party}_low'] = 0
+                    pollster_latest_polls_at_date[f'{party}_high'] = 0
+
+                poll_party_vote = int(poll[party])/100
+                party_margin_of_error = 1.96*((poll_party_vote*(1 - poll_party_vote))/effective_sample_size) ** 0.5
+                poll[f'{party}_low'] = max(poll_party_vote - party_margin_of_error, 0)
+                poll[f'{party}_high'] = min(poll_party_vote + party_margin_of_error, 1)
+            pollster_latest_polls_at_date.loc[ix] = poll
+
+        pollster_latest_polls_at_date['dk_type'] = pollster_latest_polls_at_date['pollster'].apply(
+            lambda x: pollster_dk_type[x] if x in pollster_dk_type else 'rebase')
+
         for party in parties_to_include:
-            averages_per_day.loc[analysis_date, party] = pollster_latest_polls_at_date[party].dot(
-                pollster_latest_polls_at_date['poll_weight'])/pollster_latest_polls_at_date['poll_weight'].sum()
+            party_average = (pollster_latest_polls_at_date[party].dot(pollster_latest_polls_at_date['poll_weight'])/
+                             pollster_latest_polls_at_date['poll_weight'].sum())
+            pollster_latest_polls_at_date[f'{party}_variance'] = pollster_latest_polls_at_date[party] - party_average
+            pollster_latest_polls_at_date[f'{party}_variance'] = pollster_latest_polls_at_date[f'{party}_variance'] ** 2
+            pollster_latest_polls_at_date[f'{party}_variance'] = pollster_latest_polls_at_date[f'{party}_variance']* \
+                                                                 pollster_latest_polls_at_date['poll_weight']
+
+            party_moe = 1.96*(pollster_latest_polls_at_date[f'{party}_variance'].sum()/pollster_latest_polls_at_date[
+                'poll_weight'].sum()) ** 0.5
+
+            rebasers = pollster_latest_polls_at_date.query(f'dk_type == "rebase"').copy()
+
+            rebase_average = (rebasers[party].dot(rebasers['poll_weight'])/rebasers['poll_weight'].sum())
+            rebasers[f'{party}_type_variance'] = rebasers[party] - rebase_average
+            rebasers[f'{party}_type_variance'] = rebasers[f'{party}_type_variance'] ** 2
+            rebasers[f'{party}_type_variance'] = rebasers[f'{party}_type_variance']*rebasers['poll_weight']
+
+            rebase_moe = 1.96*(rebasers[f'{party}_type_variance'].sum()/rebasers['poll_weight'].sum()) ** 0.5
+
+            adjusters = pollster_latest_polls_at_date.query(f'dk_type == "squeeze" or dk_type == "reweight"').copy()
+
+            adjuster_average = (adjusters[party].dot(adjusters['poll_weight'])/adjusters['poll_weight'].sum())
+            adjusters[f'{party}_type_variance'] = adjusters[party] - adjuster_average
+            adjusters[f'{party}_type_variance'] = adjusters[f'{party}_type_variance'] ** 2
+            adjusters[f'{party}_type_variance'] = adjusters[f'{party}_type_variance']*adjusters['poll_weight']
+
+            adjuster_moe = 1.96*(adjusters[f'{party}_type_variance'].sum()/adjusters['poll_weight'].sum()) ** 0.5
+
+            party_midpoint = party_average
+            party_low = max(party_midpoint - party_moe, 0)
+            party_high = min(party_midpoint + party_moe, 100)
+
+            party_midpoint_rebase = rebase_average
+            party_low_rebase = max(party_midpoint_rebase - rebase_moe, 0)
+            party_high_rebase = min(party_midpoint_rebase + rebase_moe, 100)
+
+            party_midpoint_adjust = adjuster_average
+            party_low_adjust = max(party_midpoint_adjust - adjuster_moe, 0)
+            party_high_adjust = min(party_midpoint_adjust + adjuster_moe, 100)
+
+            averages_per_day.loc[analysis_date, party] = party_average
+            averages_per_day.loc[analysis_date, f'{party}_low'] = party_low
+            averages_per_day.loc[analysis_date, f'{party}_high'] = party_high
 
         analysis_date += timedelta(days=1)
     # Lead is max minus 2nd max
-    averages_per_day['lead'] = averages_per_day.apply(lambda x: x.drop('lead').max(), axis=1) - averages_per_day.apply(
-        lambda x: x.map(float).drop('lead').nlargest(2).min(), axis=1)
+    averages_per_day['lead'] = (
+                averages_per_day[parties_to_include].apply(lambda x: x.max(), axis=1) - averages_per_day[
+            parties_to_include].apply(lambda x: x.map(float).nlargest(2).min(), axis=1))
 
     campaign_polls = one_year_polls[one_year_polls[reporting_date] >= campaign_start].copy()
     campaign_polls['pollster_weight'] = campaign_polls['pollster'].apply(get_pollster_weight)
@@ -404,7 +532,9 @@ def main():
     fig.set_facecolor('white')
     ax = plt.gca()
 
-    last_date = averages_per_day[averages_per_day.labour > 0].index.max()
+    averages_per_day_with_data = averages_per_day[averages_per_day.labour > 0]
+
+    last_date = averages_per_day_with_data.index.max()
 
     for party in parties_to_include:
         plt.plot_date(
@@ -413,6 +543,14 @@ def main():
             fmt='-',
             color=party_colors[party],
             linewidth=4)
+
+        ax.fill_between(averages_per_day_with_data.index,
+                        averages_per_day_with_data[f'{party}_low'].map(float),
+                        averages_per_day_with_data[f'{party}_high'].map(float),
+                        color=party_colors[party],
+                        alpha=0.2,
+
+                        )
 
         end_value = averages_per_day.loc[last_date, party]
         start_value = averages_per_day.iloc[0][party]
@@ -434,7 +572,6 @@ def main():
             edgecolors='white',
             linewidths=0.5
         )
-
 
     ax.set_yticks(arange(0, 51, 10), minor=False)
     # major_locator = plt.matplotlib.dates.DayLocator(interval=7)
