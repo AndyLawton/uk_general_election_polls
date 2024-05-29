@@ -89,6 +89,12 @@
         font-size:2em !important;
     }
 
+    #T_polling_average .row1 {
+        font-weight:light;
+        font-size:1em !important;
+        color: #444444;
+    }
+
     #T_polling_average_ .row1 {
         font-weight:light;
         font-size:1em !important;
