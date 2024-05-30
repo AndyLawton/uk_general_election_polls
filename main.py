@@ -58,7 +58,7 @@ def main():
 
     pollsters_latest = one_year_polls.groupby('pollster').nth(0).reset_index(drop=False)
 
-    top_five = {'Ipsos MORI': 100,
+    top_five = {'Ipsos': 100,
                 'Opinium': 79,
                 'YouGov': 77,
                 'Verian': 69,
@@ -81,7 +81,7 @@ def main():
                 'Lord Ashcroft Polls': 34,
                 }
 
-    top_two = {'Ipsos MORI': 100,
+    top_two = {'Ipsos': 100,
                'Survation': 85,
                'Verian': 85,
                'Panelbase': 74,
@@ -107,7 +107,7 @@ def main():
     pollster_dk_type = {
         'BMG Research': 'squeeze',
         'Deltapoll': 'rebase',
-        'Ipsos MORI': 'squeeze',
+        'Ipsos': 'squeeze',
         'Lord Ashcroft Polls': 'rebase',
         'More in Common': 'squeeze',
         'Opinium': 'reweight',
@@ -458,7 +458,11 @@ def main():
         pollster_latest_polls_at_date = pollster_latest_polls_at_date[pollster_latest_polls_at_date['poll_weight'] > 0]
 
         for ix, poll in pollster_latest_polls_at_date.iterrows():
-            effective_sample_size = int(poll['sample_size'])*sample_size_reduction_factor
+            try:
+                effective_sample_size = int(poll['sample_size'])*sample_size_reduction_factor
+            except ValueError:
+                effective_sample_size = 600
+
             for party in parties_to_include:
                 if f'{party}_low' not in pollster_latest_polls_at_date.columns:
                     pollster_latest_polls_at_date[f'{party}_low'] = 0
