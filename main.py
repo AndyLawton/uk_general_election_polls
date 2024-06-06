@@ -444,7 +444,7 @@ def main():
                                     index=pd.date_range(start=campaign_start, end=election_date))
     while analysis_date < datetime.now() - timedelta(days=1):
 
-        polls_at_date = one_year_polls.query(f'date_started < "{analysis_date}" ')
+        polls_at_date = one_year_polls.query(f'date_started <= "{analysis_date}" ')
 
         pollster_latest_polls_at_date = polls_at_date.groupby('pollster').nth(0).reset_index()
 
@@ -485,8 +485,7 @@ def main():
             pollster_latest_polls_at_date[f'{party}_variance'] = pollster_latest_polls_at_date[f'{party}_variance']* \
                                                                  pollster_latest_polls_at_date['poll_weight']
 
-            party_moe = 1.96*(pollster_latest_polls_at_date[f'{party}_variance'].sum()/pollster_latest_polls_at_date[
-                'poll_weight'].sum()) ** 0.5
+            party_moe = 1.96*(pollster_latest_polls_at_date[f'{party}_variance'].sum()/pollster_latest_polls_at_date['poll_weight'].sum()) ** 0.5
 
             rebasers = pollster_latest_polls_at_date.query(f'dk_type == "rebase"').copy()
 
