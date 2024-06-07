@@ -42,13 +42,13 @@ poll_info_columns = [
     'sample_size',
 ]
 major_parties = [
-    'conservative',
     'labour',
+    'conservative',
+    'reform_uk',
     'liberal_democrat',
 ]
 minor_parties = [
     'green',
-    'reform_uk',
     'alliance',
     'brexit_party',
     'change_uk',

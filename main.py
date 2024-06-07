@@ -54,7 +54,7 @@ def main():
 
     most_recent_date = all_polls[reporting_date].max()
     one_year_polls = all_polls[
-        all_polls[reporting_date] >= (most_recent_date + relativedelta(months=-17)).replace(day=1)].copy()
+        all_polls[reporting_date] >= (most_recent_date + relativedelta(months=-22)).replace(day=1)].copy()
 
     pollsters_latest = one_year_polls.groupby('pollster').nth(0).reset_index(drop=False)
 
@@ -340,32 +340,46 @@ def main():
         for col in range(0, len(dataframe.columns)):
             df_as_html = df_as_html.replace(f'col{col}', dataframe.columns[col])
 
-        df_as_html = (df_as_html
-                      .replace('>poll_count', '>Polls')
-                      .replace('>pollster_count', '>Pollsters')
-                      .replace('>conservative', '>Conservatives')
-                      .replace('>labour', '>Labour')
-                      .replace('>liberal_democrat', '>Lib Dem')
-                      .replace('>green', '>Green')
-                      .replace('>reform_uk', '>Reform')
-                      .replace('>lead_value', '>Lead')
-                      .replace(f'>{reporting_date}', '>Date')
-                      .replace('>poll_month', '>Month')
-                      .replace('>pollster', '>Pollster')
-                      .replace('>poll_weight', '>w')
-                      )
+        if len(dataframe) < 5:
+            df_as_html = (df_as_html
+                          .replace('>poll_count', '>Polls')
+                          .replace('>pollster_count', '>Pollsters')
+                          .replace('>conservative', '>Conservatives')
+                          .replace('>labour', '>Labour')
+                          .replace('>liberal_democrat', '>Lib Dem')
+                          .replace('>green', '>Green')
+                          .replace('>reform_uk', '>Reform')
+                          .replace('>lead_value', '>Lead')
+                          .replace(f'>{reporting_date}', '>Date')
+                          .replace('>poll_month', '>Month')
+                          .replace('>pollster', '>Pollster')
+                          .replace('>poll_weight', '>w')
+                          )
+        else:
+            df_as_html = (df_as_html
+                          .replace('>poll_count', '>Polls')
+                          .replace('>pollster_count', '>Pollsters')
+                          .replace('>conservative', '>Con')
+                          .replace('>labour', '>Lab')
+                          .replace('>liberal_democrat', '>LDem')
+                          .replace('>green', '>Green')
+                          .replace('>reform_uk', '>Ref')
+                          .replace('>lead_value', '>Lead')
+                          .replace(f'>{reporting_date}', '>Date')
+                          .replace('>poll_month', '>Month')
+                          .replace('>pollster', '>Pollster')
+                          .replace('>poll_weight', '>w')
+                          )
         return df_as_html
 
-    display_columns = [reporting_date, 'pollster', 'conservative', 'labour', 'liberal_democrat', 'lead_value']
+    display_columns = [reporting_date, 'pollster',] + major_parties + ['lead_value',]
     top_25_html = polls_to_html(all_polls[display_columns][0:25], title='Last 25 Polls')
 
-    display_columns = ['pollster', reporting_date, 'poll_weight', 'conservative', 'labour', 'liberal_democrat',
-                       'lead_value']
+    display_columns = ['pollster', reporting_date, 'poll_weight',] +major_parties + ['lead_value',]
     df = pollsters_latest.sort_values(by=['poll_weight', reporting_date], ascending=False)[display_columns]
     pollsters_recent = polls_to_html(df, title='Latest Polls', highlight_party_columns=False)
 
-    display_columns = ['poll_month', 'pollster_count', 'poll_count', 'conservative', 'labour', 'liberal_democrat',
-                       'lead_value']
+    display_columns = ['poll_month', 'pollster_count', 'poll_count', ] + major_parties+ ['lead_value',]
     df = monthly_summary.reset_index()[display_columns].iloc[:0:-1]
     monthly_averages = polls_to_html(df, title='Monthly Poll Average', highlight_party_columns=True, precision=1)
 
