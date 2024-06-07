@@ -69,4 +69,5 @@ pollster_cleanup = {
     'More In Common': 'More in Common',
     'Omnisis': 'We Think',
     'Whitestone insight': 'Whitestone Insight',
+    'Panelbase': 'Norstat',
 }
