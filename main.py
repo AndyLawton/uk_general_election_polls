@@ -54,7 +54,7 @@ def main():
 
     most_recent_date = all_polls[reporting_date].max()
     one_year_polls = all_polls[
-        all_polls[reporting_date] >= (most_recent_date + relativedelta(months=-22)).replace(day=1)].copy()
+        all_polls[reporting_date] >= (most_recent_date + relativedelta(months=-23)).replace(day=1)].copy()
 
     pollsters_latest = one_year_polls.groupby('pollster').nth(0).reset_index(drop=False)
 
