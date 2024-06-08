@@ -123,11 +123,20 @@ def main():
     }
     sample_size_reduction_factor = 0.75  # This is due to exclusion of non voters and undecideds
 
-    recency_weights = {
+    recency_weights_normal = {
         -1: 100,
         5: 100,
         14: 70,
         28: 5,
+        90: 0
+    }
+
+    #Special for campaigns
+    recency_weights = {
+        -1: 100,
+        2: 100,
+        7: 70,
+        14: 5,
         90: 0
     }
 
