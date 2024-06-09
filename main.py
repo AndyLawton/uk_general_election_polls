@@ -131,7 +131,7 @@ def main():
         90: 0
     }
 
-    #Special for campaigns
+    # Special for campaigns
     recency_weights = {
         -1: 100,
         2: 100,
@@ -188,7 +188,7 @@ def main():
             'poll_weight'].sum()
         pollsters_latest[f'{party}_variance'] = pollsters_latest[party] - party_vote_share
         pollsters_latest[f'{party}_variance'] = pollsters_latest[f'{party}_variance'] ** 2
-        pollsters_latest[f'{party}_variance'] = pollsters_latest[f'{party}_variance']* pollsters_latest['poll_weight']
+        pollsters_latest[f'{party}_variance'] = pollsters_latest[f'{party}_variance']*pollsters_latest['poll_weight']
 
         party_moe = 1.96*(pollsters_latest[f'{party}_variance'].sum()/pollsters_latest['poll_weight'].sum()) ** 0.5
         pollsters_latest.drop(columns=[f'{party}_variance'], inplace=True)
@@ -208,7 +208,8 @@ def main():
                 second_vote_share_max = party_vote_share + party_moe
                 second_vote_share_min = max_vote_share - party_moe
         current_average.loc['Polling Average', party] = party_vote_share
-        current_average.loc['Polling Range', party] = f'({max(0, party_vote_share - party_moe):.0f}-{min(100, party_vote_share + party_moe):.0f}%)'
+        current_average.loc[
+            'Polling Range', party] = f'({max(0, party_vote_share - party_moe):.0f}-{min(100, party_vote_share + party_moe):.0f}%)'
         # current_average.loc['Polling Average', party] = f'{party_vote_share:.1f}%'
     # current_average.loc['Polling Average', 'lead'] = f'{lead_party:.3s}+{max_vote_share - second_vote_share:.1f}%'
     current_average.loc['Polling Average', 'lead_value'] = max_vote_share - second_vote_share
@@ -219,7 +220,9 @@ def main():
 
     one_year_polls['poll_month'] = one_year_polls[reporting_date].apply(lambda x: x.replace(day=1))
 
-    pollster_monthly_summary = one_year_polls.groupby(['poll_month', 'pollster'])[major_parties].agg(['mean', 'count'])
+    pollster_monthly_summary = \
+    one_year_polls[~one_year_polls.pollster.str.contains('MRP')].groupby(['poll_month', 'pollster'])[major_parties].agg(
+        ['mean', 'count'])
     pollster_monthly_summary.columns = [x if i == 0 else f'count{major_parties.index(x)}' for x in major_parties for i
                                         in
                                         range(0, 2)]
@@ -257,7 +260,8 @@ def main():
             color = party_colors[party_in_lead]
             party_lead_value = df.loc['Polling Average', party_in_lead]
 
-            background_df.loc['Polling Average', 'lead_value'] =  f'background-color: {color}{result_to_opacity(party_lead_value, 0 , party_lead_value)}'
+            background_df.loc[
+                'Polling Average', 'lead_value'] = f'background-color: {color}{result_to_opacity(party_lead_value, 0, party_lead_value)}'
             return background_df
 
         max_party_lead = background_df['lead_value'].max()
@@ -302,7 +306,7 @@ def main():
         styler.apply(add_background_colour_to_cells, axis=None,
                      lead_only=not (highlight_party_columns))
 
-        #return styler.render()
+        # return styler.render()
 
         styler.format({
             "pollster": lambda x: f"{x}",
@@ -381,17 +385,16 @@ def main():
                           )
         return df_as_html
 
-    display_columns = [reporting_date, 'pollster',] + major_parties + ['lead_value',]
+    display_columns = [reporting_date, 'pollster', ] + major_parties + ['lead_value', ]
     top_25_html = polls_to_html(all_polls[display_columns][0:25], title='Last 25 Polls')
 
-    display_columns = ['pollster', reporting_date, 'poll_weight',] +major_parties + ['lead_value',]
+    display_columns = ['pollster', reporting_date, 'poll_weight', ] + major_parties + ['lead_value', ]
     df = pollsters_latest.sort_values(by=['poll_weight', reporting_date], ascending=False)[display_columns]
     pollsters_recent = polls_to_html(df, title='Latest Polls', highlight_party_columns=False)
 
-    display_columns = ['poll_month', 'pollster_count', 'poll_count', ] + major_parties+ ['lead_value',]
+    display_columns = ['poll_month', 'pollster_count', 'poll_count', ] + major_parties + ['lead_value', ]
     df = monthly_summary.reset_index()[display_columns].iloc[:0:-1]
     monthly_averages = polls_to_html(df, title='Monthly Poll Average', highlight_party_columns=True, precision=1)
-
 
     # columns_to_use = ['labour', 'conservative',  'reform_uk', 'liberal_democrat', 'green', 'lead_value']
     columns_to_use = list(
@@ -434,7 +437,7 @@ def main():
 
         ax.fill_between(monthly_summary.index[1:], monthly_summary[party][1:],
                         monthly_summary[major_parties[:2]].min(axis=1)[1:], color=party_colors[party], alpha=0.2)
-    ax.set_yticks(arange(25, 51, 5), minor=False)
+    ax.set_yticks(arange(20, 51, 5), minor=False)
     major_locator = plt.matplotlib.dates.DayLocator([1])
     major_fmt = plt.matplotlib.dates.DateFormatter('%b-%y')
 
@@ -508,7 +511,8 @@ def main():
             pollster_latest_polls_at_date[f'{party}_variance'] = pollster_latest_polls_at_date[f'{party}_variance']* \
                                                                  pollster_latest_polls_at_date['poll_weight']
 
-            party_moe = 1.96*(pollster_latest_polls_at_date[f'{party}_variance'].sum()/pollster_latest_polls_at_date['poll_weight'].sum()) ** 0.5
+            party_moe = 1.96*(pollster_latest_polls_at_date[f'{party}_variance'].sum()/pollster_latest_polls_at_date[
+                'poll_weight'].sum()) ** 0.5
 
             rebasers = pollster_latest_polls_at_date.query(f'dk_type == "rebase"').copy()
 
@@ -547,8 +551,8 @@ def main():
         analysis_date += timedelta(days=1)
     # Lead is max minus 2nd max
     averages_per_day['lead'] = (
-                averages_per_day[parties_to_include].apply(lambda x: x.max(), axis=1) - averages_per_day[
-            parties_to_include].apply(lambda x: x.map(float).nlargest(2).min(), axis=1))
+            averages_per_day[parties_to_include].apply(lambda x: x.max(), axis=1) - averages_per_day[
+        parties_to_include].apply(lambda x: x.map(float).nlargest(2).min(), axis=1))
 
     campaign_polls = one_year_polls[one_year_polls[reporting_date] >= campaign_start].copy()
     campaign_polls['pollster_weight'] = campaign_polls['pollster'].apply(get_pollster_weight)
