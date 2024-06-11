@@ -453,7 +453,7 @@ def main():
     plt.title(plot_title)
 
     source = 'Source: Wikipedia - Opinion polling for the next United Kingdom general election'
-    plt.annotate(source, (1, 0), (0, -20), xycoords='axes fraction', textcoords='offset points', va='top', ha='right')
+    plt.annotate(source, (1, 0), (0, -40), xycoords='axes fraction', textcoords='offset points', va='top', ha='right')
     fig.savefig(f'{web_files_location}/monthly_trend.png', bbox_inches='tight', pad_inches=0.2)
 
     from datetime import datetime, date, timedelta
