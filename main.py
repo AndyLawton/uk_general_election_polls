@@ -196,8 +196,10 @@ def main():
         if party_vote_share > max_vote_share:
             second_vote_share = max_vote_share
             max_vote_share = party_vote_share
+
             second_vote_share_max = max_vote_share_max
             second_vote_share_min = max_vote_share_min
+
             max_vote_share_max = party_vote_share + party_moe
             max_vote_share_min = max_vote_share - party_moe
 
@@ -206,13 +208,14 @@ def main():
             if party_vote_share > second_vote_share:
                 second_vote_share = party_vote_share
                 second_vote_share_max = party_vote_share + party_moe
-                second_vote_share_min = max_vote_share - party_moe
+                second_vote_share_min = party_vote_share - party_moe
         current_average.loc['Polling Average', party] = party_vote_share
         current_average.loc[
             'Polling Range', party] = f'({max(0, party_vote_share - party_moe):.0f}-{min(100, party_vote_share + party_moe):.0f}%)'
         # current_average.loc['Polling Average', party] = f'{party_vote_share:.1f}%'
     # current_average.loc['Polling Average', 'lead'] = f'{lead_party:.3s}+{max_vote_share - second_vote_share:.1f}%'
     current_average.loc['Polling Average', 'lead_value'] = max_vote_share - second_vote_share
+
     max_range = max_vote_share_max - second_vote_share_min
     min_range = max_vote_share_min - second_vote_share_max
 
@@ -439,7 +442,7 @@ def main():
                         monthly_summary[major_parties[:2]].min(axis=1)[1:], color=party_colors[party], alpha=0.2)
     ax.set_yticks(arange(20, 51, 5), minor=False)
     major_locator = plt.matplotlib.dates.DayLocator([1])
-    major_fmt = plt.matplotlib.dates.DateFormatter('%b-%y')
+    major_fmt = plt.matplotlib.dates.DateFormatter('%b\n%y')
 
     ax.xaxis.set_major_locator(major_locator)
     ax.xaxis.set_major_formatter(major_fmt)
