@@ -44,6 +44,13 @@ def fetch_page(url, ge_year, refresh=False):
             level1 = toc.find_all("li", {"class": "toclevel-1"})
             level1_links = [x.find('a')['href'] for x in level1]
             years = [x.replace('#', '') for x in level1_links if len(x) == 5]
+
+        if len(years)  == 0:
+            toc = soup.find_all("ul", {"class": "vector-toc-list"})[2]
+            level2 = toc.find_all("li", {"class": "vector-toc-level-2"})
+            level2_links = [x.find('a')['href'] for x in level2]
+            years = [x.replace('#', '') for x in level2_links if len(x) == 5]
+
         page_df = DataFrame()
         for year in years:
             if ge_year == '2015' and year in ['2010', '2011', '2012']:
