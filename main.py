@@ -74,7 +74,7 @@ def main():
                 'Redfield & Wilton Strategies': 34*.75,
                 'Techne UK': 34*.75,
                 'JL Partners': 34*.75,
-                'PeoplePolling': 34*0.1,  # Huge outlier without caring for fundamental polling principles
+                #'PeoplePolling': 34*0.1,  # Huge outlier without caring for fundamental polling principles - Lack of full results and tables
                 'We Think': 34*.75,
                 'More in Common': 34*.75,
                 'Whitestone Insight': 34*.75,
@@ -97,7 +97,7 @@ def main():
                'Redfield & Wilton Strategies': 34*.75,
                'Techne UK': 34*.75,
                'JL Partners': 34*.75,
-               'PeoplePolling': 34*0.1,  # Huge outlier without caring for fundamental polling principles
+               #'PeoplePolling': 34*0.1,  # Huge outlier without caring for fundamental polling principles - Lack of full results and tables
                'We Think': 34*.75,
                'More in Common': 34*.75,
                'Whitestone Insight': 34*.75,
