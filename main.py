@@ -184,6 +184,7 @@ def main():
     second_vote_share_min = 0
 
     for party in major_parties + ['reform_uk', 'green']:
+        pollsters_latest[party] = pollsters_latest[party].apply(lambda x: 10 if pd.isna(x) else x)
         party_vote_share = pollsters_latest[party].dot(pollsters_latest['poll_weight'])/pollsters_latest[
             'poll_weight'].sum()
         pollsters_latest[f'{party}_variance'] = pollsters_latest[party] - party_vote_share
@@ -485,8 +486,6 @@ def main():
                 pollster_latest_polls_at_date['recency_weight']/100)
 
         pollster_latest_polls_at_date = pollster_latest_polls_at_date[pollster_latest_polls_at_date['poll_weight'] > 0]
-
-        pollster_latest_polls_at_date = pollster_latest_polls_at_date.fillna(10)
 
         for ix, poll in pollster_latest_polls_at_date.iterrows():
             try:
