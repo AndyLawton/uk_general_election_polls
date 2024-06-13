@@ -486,6 +486,8 @@ def main():
 
         pollster_latest_polls_at_date = pollster_latest_polls_at_date[pollster_latest_polls_at_date['poll_weight'] > 0]
 
+        pollster_latest_polls_at_date = pollster_latest_polls_at_date.fillna(10)
+
         for ix, poll in pollster_latest_polls_at_date.iterrows():
             try:
                 effective_sample_size = int(poll['sample_size'])*sample_size_reduction_factor
