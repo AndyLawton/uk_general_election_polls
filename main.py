@@ -497,6 +497,9 @@ def main():
                     pollster_latest_polls_at_date[f'{party}_low'] = 0
                     pollster_latest_polls_at_date[f'{party}_high'] = 0
 
+                if pd.isna(poll[party]):
+                    poll[party] = 10
+
                 poll_party_vote = int(poll[party])/100
                 party_margin_of_error = 1.96*((poll_party_vote*(1 - poll_party_vote))/effective_sample_size) ** 0.5
                 poll[f'{party}_low'] = max(poll_party_vote - party_margin_of_error, 0)
