@@ -599,7 +599,7 @@ def main():
         start_value = averages_per_day.iloc[0][party]
         change = end_value - start_value
 
-        annotation_text = f'- ({change:+.1f})'
+        pollster_list = f'- ({change:+.1f})'
         annotation_x = last_date - timedelta(hours=2)
         annotation_y = end_value - 1
         ax.annotate(annotation_text, (annotation_x, annotation_y), textcoords="offset points", xytext=(0, 10),
@@ -631,8 +631,8 @@ def main():
 
     plot_title = 'Campaign Polling Average'
     plt.title(plot_title)
-    # source = 'Source: Wikipedia - Opinion polling for the next United Kingdom general election'
-    # plt.annotate(source, (1, 0), (0, -20), xycoords='axes fraction', textcoords='offset points', va='top', ha='right')
+    source = 'Source: Wikipedia - Opinion polling for the next United Kingdom general election'
+    plt.annotate(source, (1, 0), (0, -20), xycoords='axes fraction', textcoords='offset points', va='top', ha='right')
     fig.savefig(f'{web_files_location}/campaign_polling.png', bbox_inches='tight', pad_inches=0.2)
 
 
