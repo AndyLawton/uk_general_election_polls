@@ -54,7 +54,7 @@ def main():
 
     most_recent_date = all_polls[reporting_date].max()
     one_year_polls = all_polls[
-        all_polls[reporting_date] >= (most_recent_date + relativedelta(months=-23)).replace(day=1)].copy()
+        all_polls[reporting_date] >= (most_recent_date + relativedelta(months=-20)).replace(day=1)].copy()
 
     one_year_polls = one_year_polls[~one_year_polls.pollster.str.contains('MRP')]
     one_year_polls = one_year_polls[~one_year_polls.pollster.str.contains('SRP')]
@@ -599,7 +599,7 @@ def main():
         start_value = averages_per_day.iloc[0][party]
         change = end_value - start_value
 
-        annotation_text = f'{end_value:.1f}% ({change:+.1f})'
+        annotation_text = f' {end_value:.1f}% ({change:+.1f})'
         annotation_x = last_date - timedelta(hours=2)
         annotation_y = end_value - 1
         ax.annotate(annotation_text, (annotation_x, annotation_y), textcoords="offset points", xytext=(0, 10),
