@@ -599,7 +599,7 @@ def main():
         start_value = averages_per_day.iloc[0][party]
         change = end_value - start_value
 
-        annotation_text = f' {end_value:.1f}% ({change:+.1f})'
+        annotation_text = f'- {end_value:.1f}% ({change:+.1f})'
         annotation_x = last_date - timedelta(hours=2)
         annotation_y = end_value - 1
         ax.annotate(annotation_text, (annotation_x, annotation_y), textcoords="offset points", xytext=(0, 10),
