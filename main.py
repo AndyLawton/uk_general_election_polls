@@ -54,7 +54,7 @@ def main():
 
     most_recent_date = all_polls[reporting_date].max()
     one_year_polls = all_polls[
-        all_polls[reporting_date] >= (most_recent_date + relativedelta(months=-22)).replace(day=1)].copy()
+        all_polls[reporting_date] >= (most_recent_date + relativedelta(months=-21)).replace(day=1)].copy()
 
     one_year_polls = one_year_polls[~one_year_polls.pollster.str.contains('MRP')]
     one_year_polls = one_year_polls[~one_year_polls.pollster.str.contains('SRP')]
@@ -475,7 +475,7 @@ def main():
 
     averages_per_day = pd.DataFrame(columns=average_columns,
                                     index=pd.date_range(start=campaign_start, end=election_date))
-    while analysis_date < datetime.now() - timedelta(days=0):
+    while analysis_date < datetime.now() + timedelta(days=1):
 
         polls_at_date = one_year_polls.query(f'date_started <= "{analysis_date}" ')
 
