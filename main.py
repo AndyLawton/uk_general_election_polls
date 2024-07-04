@@ -59,47 +59,47 @@ def main():
     pollsters_latest = one_year_polls.groupby('pollster').nth(0).reset_index(drop=False)
 
     top_five = {'Ipsos': 100,
-                'Opinium': 79,
-                'YouGov': 77,
-                'Verian': 69,
+                #'Opinium': 79,
+                #'YouGov': 77,
+                #'Verian': 69,
                 'Number Cruncher Politics': 61,
                 'Survation': 59,
-                'Norstat': 57,
+                #'Norstat': 57,
                 'Deltapoll': 46,
                 'BMG Research': 44,
-                'FocalData': 39,
+                #'FocalData': 39,
                 'ICM Research': 35,
                 'Savanta': 34,
-                'Find Out Now': 34*0.3,  # Ludicrous Local Election Polling
+                #'Find Out Now': 34*0.3,  # Ludicrous Local Election Polling
                 'Redfield & Wilton Strategies': 34*.75,
                 'Techne UK': 34*.75,
-                'JL Partners': 34*.75,
+                #'JL Partners': 34*.75,
                 #'PeoplePolling': 34*0.1,  # Huge outlier without caring for fundamental polling principles - Lack of full results and tables
                 'We Think': 34*.75,
-                'More in Common': 34*.75,
+                #'More in Common': 34*.75,
                 'Whitestone Insight': 34*.75,
                 'Lord Ashcroft Polls': 34,
                 }
 
     top_two = {'Ipsos': 100,
                'Survation': 85,
-               'Verian': 85,
-               'Norstat': 74,
+               #'Verian': 85,
+               #'Norstat': 74,
                'Number Cruncher Politics': 71,
-               'Opinium': 71,
-               'YouGov': 67,
+               #'Opinium': 71,
+               #'YouGov': 67,
                'Deltapoll': 50,
-               'FocalData': 42,
+               #'FocalData': 42,
                'BMG Research': 39,
                'Savanta': 29,
                'ICM Research': 27,
-               'Find Out Now': 34*0.3,  # Ludicrous Local Election Polling
+               #'Find Out Now': 34*0.3,  # Ludicrous Local Election Polling
                'Redfield & Wilton Strategies': 34*.75,
                'Techne UK': 34*.75,
-               'JL Partners': 34*.75,
+               #'JL Partners': 34*.75,
                #'PeoplePolling': 34*0.1,  # Huge outlier without caring for fundamental polling principles - Lack of full results and tables
                'We Think': 34*.75,
-               'More in Common': 34*.75,
+               #'More in Common': 34*.75,
                'Whitestone Insight': 34*.75,
                'Lord Ashcroft Polls': 34,
                }
@@ -472,7 +472,7 @@ def main():
 
     averages_per_day = pd.DataFrame(columns=average_columns,
                                     index=pd.date_range(start=campaign_start, end=election_date))
-    while analysis_date < datetime.now() - timedelta(days=1):
+    while analysis_date < datetime.now() - timedelta(days=0):
 
         polls_at_date = one_year_polls.query(f'date_started <= "{analysis_date}" ')
 
