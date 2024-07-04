@@ -475,7 +475,7 @@ def main():
 
     averages_per_day = pd.DataFrame(columns=average_columns,
                                     index=pd.date_range(start=campaign_start, end=election_date))
-    while analysis_date < datetime.now() + timedelta(days=1):
+    while analysis_date < datetime.now() + timedelta(days=0):
 
         polls_at_date = one_year_polls.query(f'date_started <= "{analysis_date}" ')
 
