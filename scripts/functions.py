@@ -73,6 +73,8 @@ def set_pollster_client(pollster, client, pollster_client):
         pollster = 'General Election'
     #pollster = pollster.replace('(MRP)', '')
     pollster = pollster.strip()
+    if 'Archive' in pollster:
+        pollster = pollster.split('Archive')[0].strip()
     if pollster in pollster_cleanup:
         pollster = pollster_cleanup[pollster]
     if not isna(client):
