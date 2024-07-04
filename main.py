@@ -56,6 +56,9 @@ def main():
     one_year_polls = all_polls[
         all_polls[reporting_date] >= (most_recent_date + relativedelta(months=-23)).replace(day=1)].copy()
 
+    one_year_polls = one_year_polls[~one_year_polls.pollster.str.contains('MRP')]
+    one_year_polls = one_year_polls[~one_year_polls.pollster.str.contains('SRP')]
+
     pollsters_latest = one_year_polls.groupby('pollster').nth(0).reset_index(drop=False)
 
     top_five = {'Ipsos': 100,
@@ -597,7 +600,7 @@ def main():
         change = end_value - start_value
 
         annotation_text = f'{end_value:.1f}% ({change:+.1f})'
-        annotation_x = last_date + timedelta(hours=12)
+        annotation_x = last_date - timedelta(hours=2)
         annotation_y = end_value - 1
         ax.annotate(annotation_text, (annotation_x, annotation_y), textcoords="offset points", xytext=(0, 10),
                     ha='left', fontsize=10, va='top', color=party_colors[party], fontweight='bold')

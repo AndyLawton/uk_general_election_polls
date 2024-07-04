@@ -72,6 +72,7 @@ def set_pollster_client(pollster, client, pollster_client):
     if 'general election' in pollster.lower():
         pollster = 'General Election'
     #pollster = pollster.replace('(MRP)', '')
+    #pollster = pollster.replace('(SRP)', '')
     pollster = pollster.strip()
     if 'Archive' in pollster:
         pollster = pollster.split('Archive')[0].strip()
